@@ -56,8 +56,9 @@
     </build>
     <distributionManagement>
         <repository>
-            <id>bintray</id>
-            <url>https://api.bintray.com/maven/NLeSC/maven/tycho-knime-node-archetype</url>
+            <id>bintray-nlesc-tycho-knime-node-archetype</id>
+            <name>nlesc-tycho-knime-node-archetype</name>
+            <url>https://api.bintray.com/maven/nlesc/tycho-knime-node-archetype/tycho-knime-node-archetype/;publish=1</url>
         </repository>
     </distributionManagement>
 </project>
