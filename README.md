@@ -23,7 +23,10 @@ The [Maven archetype](https://maven.apache.org/guides/introduction/introduction-
 
 1. Execute
 ```
-mvn archetype:generate -DarchetypeGroupId=nl.esciencecenter -DarchetypeArtifactId=tycho-knime-node-archetype  -DarchetypeVersion=1.0.0 -DarchetypeRepository=https://dl.bintray.com/nlesc/tycho-knime-node-archetype
+mvn archetype:generate -DarchetypeGroupId=nl.esciencecenter \
+-DarchetypeArtifactId=tycho-knime-node-archetype \
+-DarchetypeVersion=1.0.0 \
+-DarchetypeRepository=https://dl.bintray.com/nlesc/tycho-knime-node-archetype
 ```
 2. Enter the groupId
 3. Enter the artifactId
