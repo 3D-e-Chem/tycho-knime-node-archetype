@@ -1,0 +1,22 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/${parentArtifactId}.feature-${version}.jar" id="${parentArtifactId}.feature" version="${version}">
+      <category name="${parentArtifactId}"/>
+   </feature>
+   <feature url="features/${parentArtifactId}.feature.source_${version}.jar" id="${parentArtifactId}.feature.source" version="${version}">
+      <category name="${parentArtifactId}.sources"/>
+   </feature>
+   <category-def name="${parentArtifactId}" label="[Enter Category Label here.]">
+      <description>
+         [Enter Category Description here.]
+      </description>
+   </category-def>
+   <category-def name="${parentArtifactId}.sources" label="[Enter Sources Category Label here.]">
+      <description>
+        [Enter Sources of Category Description here.]
+      </description>
+   </category-def>
+</site>
