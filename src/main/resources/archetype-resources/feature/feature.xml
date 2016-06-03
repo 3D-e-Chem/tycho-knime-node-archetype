@@ -5,7 +5,8 @@
 <feature
       id="${parentArtifactId}.feature"
       label="${parentArtifactId} Feature"
-      version="${version}">
+      version="${version}"
+      provider-name="[Enter provider name here.]">
 
   <description url="https://github.com/${github_organization}/${github_repository}">
      [Enter Feature Description here.]

@@ -15,7 +15,7 @@
    -->
 
     <extension point="org.knime.workbench.repository.nodes">
-        <node category-path="/" factory-class="${package}.SomeNodeFactory" id="${package}.SomeNodeFactory"/>
+        <node category-path="/" factory-class="${package}.${node}Factory" id="${package}.${node}Factory"/>
     </extension>
 
 </plugin>

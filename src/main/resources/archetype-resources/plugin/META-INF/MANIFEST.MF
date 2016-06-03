@@ -7,7 +7,7 @@ Bundle-Name: [Enter Your Node name here here.]
 Bundle-SymbolicName: ${rootArtifactId}.plugin;singleton:=true
 Bundle-Version: ${version}
 Bundle-RequiredExecutionEnvironment: JavaSE-$java_version
-Bundle-Activator: ${package}.SomeNodePlugin
+Bundle-Activator: ${package}.Activator
 Bundle-Vendor: [Enter Your Company here.]
 Require-Bundle: org.eclipse.core.runtime,
  org.knime.workbench.core,

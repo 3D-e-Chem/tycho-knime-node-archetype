@@ -1,24 +1,19 @@
-#set( $symbol_pound = '#' )
-#set( $symbol_dollar = '$' )
-#set( $symbol_escape = '\' )
 package ${package};
 
 import org.knime.core.node.NodeView;
 
 /**
- * <code>NodeView</code> for the "SomeNode" Node.
- * Some node does something.
+ * <code>NodeView</code> for the "${node}" Node.
  *
- * @author Your Name
  */
-public class SomeNodeView extends NodeView<SomeNodeModel> {
+public class ${node}View extends NodeView<${node}Model> {
 
     /**
      * Creates a new view.
      *
-     * @param nodeModel The model (class: {@link SomeNodeModel})
+     * @param nodeModel The model (class: {@link ${node}Model})
      */
-    protected SomeNodeView(final SomeNodeModel nodeModel) {
+    protected ${node}View(final ${node}Model nodeModel) {
         super(nodeModel);
 
         // TODO instantiate the components of the view here.
@@ -33,8 +28,8 @@ public class SomeNodeView extends NodeView<SomeNodeModel> {
 
         // TODO retrieve the new model from your nodemodel and
         // update the view.
-        SomeNodeModel nodeModel =
-            (SomeNodeModel)getNodeModel();
+        ${node}Model nodeModel =
+            (${node}Model)getNodeModel();
         assert nodeModel != null;
 
         // be aware of a possibly not executed nodeModel! The data you retrieve

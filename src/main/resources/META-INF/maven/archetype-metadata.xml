@@ -14,6 +14,7 @@
       </requiredProperty>
       <requiredProperty key="github_organization"/>
       <requiredProperty key="github_repository"/>
+      <requiredProperty key="node"/>
     </requiredProperties>
   <fileSets>
     <fileSet filtered="true" encoding="UTF-8">

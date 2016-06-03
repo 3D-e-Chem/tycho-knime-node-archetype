@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <knimeNode icon="./default.png" type="Manipulator" xmlns="http://knime.org/node/v2.8" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://knime.org/node/v2.10 http://knime.org/node/v2.10.xsd">
-    <name>SomeNode</name>
+    <name>${node}</name>
     
     <shortDescription>
-        Some node does something.
+        [Enter short description here.]
     </shortDescription>
     
     <fullDescription>
-        <intro>Insert long description here...</intro>
+        <intro>[Enter long description here.]</intro>
         
         
         <option name="short name of first option (like in the dialog)">description of first option</option>

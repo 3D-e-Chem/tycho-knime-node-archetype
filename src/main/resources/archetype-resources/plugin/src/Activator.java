@@ -1,6 +1,3 @@
-#set( $symbol_pound = '#' )
-#set( $symbol_dollar = '$' )
-#set( $symbol_escape = '\' )
 package ${package};
 
 import org.eclipse.core.runtime.Plugin;
@@ -13,18 +10,17 @@ import org.osgi.framework.BundleContext;
  * If you want to move/rename this file, make sure to change the plugin.xml
  * file in the project root directory accordingly.
  *
- * @author Your Name
  */
-public class SomeNodePlugin extends Plugin {
+public class Activator extends Plugin {
     // The plug-in ID
-	public static final String PLUGIN_ID = "${parentArtifactId}.plugin";
+    public static final String PLUGIN_ID = "${parentArtifactId}.plugin";
     // The shared instance.
-    private static SomeNodePlugin plugin;
+    private static Activator plugin;
 
     /**
      * The constructor.
      */
-    public SomeNodePlugin() {
+    public Activator() {
         super();
         plugin = this;
     }
@@ -58,7 +54,7 @@ public class SomeNodePlugin extends Plugin {
      *
      * @return Singleton instance of the Plugin
      */
-    public static SomeNodePlugin getDefault() {
+    public static Activator getDefault() {
         return plugin;
     }
 

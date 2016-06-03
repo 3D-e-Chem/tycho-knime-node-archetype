@@ -1,6 +1,3 @@
-#set( $symbol_pound = '#' )
-#set( $symbol_dollar = '$' )
-#set( $symbol_escape = '\' )
 package ${package};
 
 import org.knime.core.node.NodeDialogPane;
@@ -8,20 +5,18 @@ import org.knime.core.node.NodeFactory;
 import org.knime.core.node.NodeView;
 
 /**
- * <code>NodeFactory</code> for the "SomeNode" Node.
- * Some node does something.
+ * <code>NodeFactory</code> for the "${node}" Node.
  *
- * @author Your Name
  */
-public class SomeNodeFactory
-        extends NodeFactory<SomeNodeModel> {
+public class ${node}Factory
+        extends NodeFactory<${node}Model> {
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public SomeNodeModel createNodeModel() {
-        return new SomeNodeModel();
+    public ${node}Model createNodeModel() {
+        return new ${node}Model();
     }
 
     /**
@@ -36,9 +31,9 @@ public class SomeNodeFactory
      * {@inheritDoc}
      */
     @Override
-    public NodeView<SomeNodeModel> createNodeView(final int viewIndex,
-            final SomeNodeModel nodeModel) {
-        return new SomeNodeView(nodeModel);
+    public NodeView<${node}Model> createNodeView(final int viewIndex,
+            final ${node}Model nodeModel) {
+        return new ${node}View(nodeModel);
     }
 
     /**
@@ -54,7 +49,7 @@ public class SomeNodeFactory
      */
     @Override
     public NodeDialogPane createNodeDialogPane() {
-        return new SomeNodeDialog();
+        return new ${node}Dialog();
     }
 
 }

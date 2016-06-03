@@ -3,7 +3,6 @@
 [![Build Status](https://travis-ci.org/3D-e-Chem/tycho-knime-node-archetype.svg?branch=master)](https://travis-ci.org/3D-e-Chem/tycho-knime-node-archetype)
 [ ![Download](https://api.bintray.com/packages/nlesc/tycho-knime-node-archetype/tycho-knime-node-archetype/images/download.svg) ](https://bintray.com/nlesc/tycho-knime-node-archetype/tycho-knime-node-archetype/_latestVersion)
 
-
 Generates [Knime](http://www.knime.org) workflow node skeleton repository with sample code.
 
 The [Maven archetype](https://maven.apache.org/guides/introduction/introduction-to-archetypes.html) will generate a multi-module project with the following structure:
@@ -25,18 +24,19 @@ The [Maven archetype](https://maven.apache.org/guides/introduction/introduction-
 ```
 mvn archetype:generate -DarchetypeGroupId=nl.esciencecenter \
 -DarchetypeArtifactId=tycho-knime-node-archetype \
--DarchetypeVersion=1.0.0 \
+-DarchetypeVersion=1.1.0 \
 -DarchetypeRepository=https://dl.bintray.com/nlesc/tycho-knime-node-archetype
 ```
 2. Enter the groupId
 3. Enter the artifactId
 4. Enter the name of the package under which your code will be created
 5. Enter the version of your project
-6. Enter the Github organization name or Github username.
+6. Enter the Github organization name or Github username
 7. Enter the Github repository name
-8. Confirm
-9. Change directory to generated code.
-10. Fill in all placeholders (`[Enter ... here.]`) in
+8. Enter the Knime node name
+9. Confirm
+10. Change directory to generated code.
+11. Fill in all placeholders (`[Enter ... here.]`) in
 
     * plugin/META-INF/MANIFEST.MF
     * plugin/src/**/*.xml
