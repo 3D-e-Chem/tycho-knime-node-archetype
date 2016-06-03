@@ -55,14 +55,13 @@ Further instructions about generated project can be found in it's README.md file
 2. Update CHANGELOG.md
 3. Commit & push
 4. Create Github release
-5. Deploy to Bintray, see Deploy chapter
+5. Deploy to Bintray, see Deploy chapter below
 
 ### Deploy
 
 To deploy current version to Bintray.
 
 1. Add bintray credentials to ~/.m2/settings.xml
-2. Create version on bintray
 2. Run `mvn deploy`
 
 ## Attribution
