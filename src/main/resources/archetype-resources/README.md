@@ -13,7 +13,7 @@ Requirements:
 
 * KNIME, https://www.knime.org, version 3.1 or higher
 
-Steps to get KripoDB Python templates inside KNIME:
+Steps to get the ${node} KNIME node inside KNIME:
 
 1. Goto Help > Install new software ... menu
 2. Press add button
@@ -45,17 +45,32 @@ Steps to get development environment setup:
 1. Download KNIME SDK from https://www.knime.org/downloads/overview
 2. Install/Extract/start KNIME SDK
 3. Start SDK
-4. Install m2e (Maven integration for Eclipse)
+4. Install m2e (Maven integration for Eclipse) + KNIME Testing framework
 
     1. Goto Help > Install new software ...
     2. Make sure Update site is http://update.knime.org/analytics-platform/3.1 is in the pull down list otherwise add it
     3. Select --all sites-- in work with pulldown
     4. Select m2e (Maven integration for Eclipse)
-    5. Install software & restart
+    5. Select `KNIME Testing framework`
+    6. Install software & restart
 
 5. Import this repo as an Existing Maven project
 
 During import the Tycho Eclipse providers must be installed.
+
+${symbol_pound}${symbol_pound} Tests
+
+Tests for the node are in `tests/src` directory.
+Tests can be executed with `mvn verify`, they will be run in a separate KNIME environment.
+Test results will be written to `test/target/surefire-reports` directory.
+
+${symbol_pound}${symbol_pound}${symbol_pound} Unit tests
+
+Unit tests written in Junit4 format can be put in `tests/src/java`.
+
+${symbol_pound}${symbol_pound}${symbol_pound} Workflow tests
+
+See https://github.com/3D-e-Chem/knime-testflow${symbol_pound}3-add-test-workflow
 
 ${symbol_pound} New release
 

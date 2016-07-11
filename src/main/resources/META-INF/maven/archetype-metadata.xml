@@ -98,6 +98,16 @@
             <include>**/*.MF</include>
           </includes>
         </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory>src/knime</directory>
+          <includes>
+            <include>**/*.xml</include>
+            <include>**/*.svg</include>
+            <include>**/*.knime</include>
+            <include>**/*.savedWithData</include>
+            <include>**/*.zip</include>
+          </includes>
+        </fileSet>
         <fileSet filtered="true" encoding="UTF-8">
           <directory></directory>
           <includes>

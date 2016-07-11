@@ -43,6 +43,11 @@
             <layout>p2</layout>
             <url>${symbol_dollar}{knime.update.site}</url>
         </repository>
+        <repository>
+            <id>3d-e-chem</id>
+            <layout>p2</layout>
+            <url>https://3d-e-chem.github.io/updates</url>
+        </repository>
     </repositories>
     <build>
         <plugins>
