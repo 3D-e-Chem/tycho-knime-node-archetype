@@ -5,6 +5,10 @@ The file is formatted as described on http://keepachangelog.com/.
 
 ## [Unreleased]
 
+### Changed
+
+* Generate Java code in src/java/ dir (#2)
+
 ## [1.1.0] - 2016-06-03
 
 ### Changed
