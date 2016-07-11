@@ -5,13 +5,15 @@ The file is formatted as described on http://keepachangelog.com/.
 
 ## [Unreleased]
 
+## [1.2.0] - 2016-07-11
+
 ### Added
 
 * Workflow test (#4)
 
 ### Changed
 
-* Generate Java code in src/java/ dir (#2)
+* Moved *.java files to src/java/ directory (#2)
 
 ## [1.1.0] - 2016-06-03
 
