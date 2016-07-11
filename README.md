@@ -27,7 +27,7 @@ The [Maven archetype](https://maven.apache.org/guides/introduction/introduction-
 ```
 mvn archetype:generate -DarchetypeGroupId=nl.esciencecenter \
 -DarchetypeArtifactId=tycho-knime-node-archetype \
--DarchetypeVersion=1.1.0 \
+-DarchetypeVersion=1.2.0 \
 -DarchetypeRepository=https://dl.bintray.com/nlesc/tycho-knime-node-archetype
 ```
 2. Enter the groupId
