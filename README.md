@@ -2,7 +2,6 @@
 
 [![Build Status](https://travis-ci.org/3D-e-Chem/tycho-knime-node-archetype.svg?branch=master)](https://travis-ci.org/3D-e-Chem/tycho-knime-node-archetype)
 [ ![Download](https://api.bintray.com/packages/nlesc/tycho-knime-node-archetype/tycho-knime-node-archetype/images/download.svg) ](https://bintray.com/nlesc/tycho-knime-node-archetype/tycho-knime-node-archetype/_latestVersion)
-[![DOI](https://zenodo.org/badge/19641/3D-e-Chem/knime-python-wrapper.svg)](https://zenodo.org/badge/latestdoi/19641/3D-e-Chem/knime-python-wrapper)
 
 Generates [Knime](http://www.knime.org) workflow node skeleton repository with sample code.
 
