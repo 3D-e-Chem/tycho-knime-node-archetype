@@ -61,7 +61,16 @@ Further instructions about generated project can be found in it's README.md file
 
 To deploy current version to Bintray.
 
-1. Add bintray credentials to ~/.m2/settings.xml
+1. Add bintray API key to [~/.m2/settings.xml](https://maven.apache.org/settings.html)
+
+```
+<server>
+    <id>bintray-nlesc-knime-python-node-archetype</id>
+    <username>************</username>
+    <password>********************************</password>
+</server>
+```
+
 2. Run `mvn deploy`
 
 ## Attribution
