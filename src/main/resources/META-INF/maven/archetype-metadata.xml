@@ -36,14 +36,14 @@
     <module id="${rootArtifactId}.plugin" dir="plugin" name="${rootArtifactId}.plugin">
       <fileSets>
         <fileSet filtered="true" packaged="true" encoding="UTF-8">
-          <directory>src</directory>
+          <directory>src/java</directory>
           <includes>
             <include>**/*.java</include>
             <include>**/*.xml</include>
           </includes>
         </fileSet>
         <fileSet filtered="false" packaged="true" encoding="UTF-8">
-          <directory>src</directory>
+          <directory>src/java</directory>
           <includes>
             <include>**/*.png</include>
           </includes>
@@ -87,7 +87,7 @@
     <module id="${rootArtifactId}.tests" dir="tests" name="${rootArtifactId}.tests">
       <fileSets>
         <fileSet filtered="true" packaged="true" encoding="UTF-8">
-          <directory>src</directory>
+          <directory>src/java</directory>
           <includes>
             <include>**/*.java</include>
           </includes>
@@ -96,6 +96,16 @@
           <directory>META-INF</directory>
           <includes>
             <include>**/*.MF</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory>src/knime</directory>
+          <includes>
+            <include>**/*.xml</include>
+            <include>**/*.svg</include>
+            <include>**/*.knime</include>
+            <include>**/*.savedWithData</include>
+            <include>**/*.zip</include>
           </includes>
         </fileSet>
         <fileSet filtered="true" encoding="UTF-8">
