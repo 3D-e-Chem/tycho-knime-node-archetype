@@ -76,17 +76,14 @@ ${symbol_pound} New release
 
 1. Update versions in pom files with `mvn org.eclipse.tycho:tycho-versions-plugin:set-version -DnewVersion=<version>` command.
 2. Manually update version of "source" feature in `p2/category.xml` file.
-3. Commit and push changes
 3. Create package with `mvn package`, will create update site in `p2/target/repository`
-4. Append new release to an update site
+4. Run tests with `mvn verify`
+5. Optionally, test node by installing it in KNIME from a local update site
+6. Append new release to an update site
   1. Make clone of an update site repo
   2. Append release to the update site with `mvn install -Dtarget.update.site=<path to update site>`
-5. Commit and push changes in this repo and update site repo.
-
-${symbol_pound}${symbol_pound} Offline Knime update site
-
-If Knime update site can not be contacted then use a local version.
-
-1. Download zip of update site from https://www.knime.org/downloads/update
-2. Unzip it
-3. To maven commands add `-Dknime.update.site=file://<path to update site directory>`
+7. Commit and push changes in this repo and update site repo.
+8. Create a Github release
+9. Update Zenodo entry
+  1. Correct authors
+  2. Correct license
