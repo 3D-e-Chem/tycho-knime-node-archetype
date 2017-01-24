@@ -5,6 +5,12 @@ The file is formatted as described on http://keepachangelog.com/.
 
 ## [Unreleased]
 
+## [1.2.1] - 2017-01-24
+
+### Added
+
+* Instruction to add the generated repo to the 3D-e-Chem KNIME feature (https://github.com/3D-e-Chem/knime-node-collection/issues/3)
+
 ### Fixed
 
 * Travis-CI build failed due to missing X environment
