@@ -87,3 +87,5 @@ ${symbol_pound} New release
 9. Update Zenodo entry
   1. Correct authors
   2. Correct license
+10. Make nodes available to 3D-e-Chem KNIME feature by following steps at https://github.com/3D-e-Chem/knime-node-collection#new-release
+
