@@ -5,6 +5,10 @@ The file is formatted as described on http://keepachangelog.com/.
 
 ## [Unreleased]
 
+### Added
+
+* Code coverage (#3)
+
 ## [1.2.1] - 2017-01-24
 
 ### Added

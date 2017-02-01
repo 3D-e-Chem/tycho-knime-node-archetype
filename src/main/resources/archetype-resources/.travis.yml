@@ -4,5 +4,16 @@ jdk: oraclejdk8
 cache:
   directories:
    - $HOME/.m2
+   - $HOME/jpm
 install: mvn package -B
 script: xvfb-run mvn verify -B
+# Uncomment below to upload coverage to Codacy (https://www.codacy.com),
+# Next steps to integrate coverage:
+# 1. Register repo as project on Codacy website
+# 2. Add CODACY_PROJECT_TOKEN env var to Travis-CI settings, token can be found in Codacy project settings
+# 3. Push a change to GitHub to trigger a Travis-CI build and Codacy analysis
+# 3. Add coverage badge to README.md, badge snippet can be found in Codacy project settings
+#after_success:
+#- curl -sL https://github.com/jpm4j/jpm4j.installers/raw/master/dist/biz.aQute.jpm.run.jar > ~/.m2/jpm4j.jar
+#- java -jar $HOME/.m2/jpm4j.jar -u install com.codacy:codacy-coverage-reporter:assembly
+#- $HOME/jpm/bin/codacy-coverage-reporter -l Java -r tests/target/jacoco/report/jacoco.xml

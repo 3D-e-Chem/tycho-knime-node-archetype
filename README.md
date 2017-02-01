@@ -65,7 +65,7 @@ To deploy current version to Bintray.
 
 ```
 <server>
-    <id>bintray-nlesc-knime-python-node-archetype</id>
+    <id>bintray</id>
     <username>************</username>
     <password>********************************</password>
 </server>

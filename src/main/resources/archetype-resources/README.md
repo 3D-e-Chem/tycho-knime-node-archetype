@@ -38,6 +38,9 @@ mvn verify
 An Eclipse update site will be made in `p2/target/repository` directory.
 The update site can be used to perform a local installation.
 
+Code coverage reports (html+xml) can be found in the `tests/target/jacoco/report/` directory.
+See `.travis.yml` how to upload coverage to https://www.codacy.com
+
 ${symbol_pound} Development
 
 Steps to get development environment setup:
