@@ -1,7 +1,7 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-Knime node skeleton with sample code as described [here](https://tech.knime.org/developer-guide).
+KNIME node skeleton with sample code as described [here](https://tech.knime.org/developer-guide).
 
 [![Build Status](https://travis-ci.org/${github_organization}/${github_repository}.svg?branch=master)](https://travis-ci.org/${github_organization}/${github_repository})
 
@@ -11,7 +11,7 @@ ${symbol_pound} Installation
 
 Requirements:
 
-* KNIME, https://www.knime.org, version 3.1 or higher
+* KNIME, https://www.knime.org, version ${knime_version} or higher
 
 Steps to get the ${node} KNIME node inside KNIME:
 
@@ -21,11 +21,11 @@ Steps to get the ${node} KNIME node inside KNIME:
 4. Select --all sites-- in `work with` pulldown
 5. Select the node
 6. Install software
-7. Restart Knime
+7. Restart KNIME
 
 ${symbol_pound} Usage
 
-1. Create a new Knime workflow.
+1. Create a new KNIME workflow.
 2. Find node in Node navigator panel.
 3. Drag node to workflow canvas.
 
@@ -35,7 +35,7 @@ ${symbol_pound} Build
 mvn verify
 ```
 
-An Eclipse update site will be made in `p2/target/repository` repository.
+An Eclipse update site will be made in `p2/target/repository` directory.
 The update site can be used to perform a local installation.
 
 ${symbol_pound} Development

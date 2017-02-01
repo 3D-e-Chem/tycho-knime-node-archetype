@@ -4,7 +4,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <requiredProperties>
       <requiredProperty key="tycho_version">
-        <defaultValue>0.25.0</defaultValue>
+        <defaultValue>0.26.0</defaultValue>
       </requiredProperty>
       <requiredProperty key="java_version">
         <defaultValue>1.8</defaultValue>
