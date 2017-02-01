@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
@@ -13,7 +14,7 @@
 
 	<build>
 		<plugins>
-		<plugin>
+			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
 				<version>0.7.8</version>
@@ -28,10 +29,8 @@
 					</execution>
 				</executions>
 			</plugin>
-			<!-- the report goal of jacoco-maven-plugin plugin shows coverage of tests.
-			  To get coverage of ../plugin/java/src/ use the jacoco ant reporter.
-			  See https://intellectualcramps.wordpress.com/2012/03/22/jacoco-tycho-and-coverage-reports/
-			-->
+			<!-- the report goal of jacoco-maven-plugin plugin shows coverage of tests. 
+				To get coverage of ../plugin/java/src/ use the jacoco ant reporter. See https://intellectualcramps.wordpress.com/2012/03/22/jacoco-tycho-and-coverage-reports/ -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-antrun-plugin</artifactId>
@@ -109,6 +108,8 @@
 				<version>${tycho.version}</version>
 				<configuration>
 					<argLine>${tycho.testArgLine} ${tycho.test.jvmArgs}</argLine>
+					<useUIHarness>true</useUIHarness>
+					<useUIThread>${custom.UIThread}</useUIThread>
 				</configuration>
 
 			</plugin>
@@ -117,5 +118,23 @@
 	<properties>
 		<!-- kill test JVM if tests take more than 1 minute (60 seconds) to finish -->
 		<surefire.timeout>60</surefire.timeout>
+		<custom.UIThread>true</custom.UIThread>
 	</properties>
+	<profiles>
+		<profile>
+			<id>macosx</id>
+			<activation>
+				<os>
+					<name>mac os x</name>
+					<family>mac</family>
+				</os>
+			</activation>
+			<properties>
+				<tycho.test.jvmArgs>-XstartOnFirstThread</tycho.test.jvmArgs>
+				<custom.UIThread>false</custom.UIThread>
+			</properties>
+			<build>
+			</build>
+		</profile>
+	</profiles>
 </project>

@@ -135,17 +135,6 @@
     </build>
     <profiles>
         <profile>
-            <id>macosx</id>
-            <activation>
-                <os>
-                    <family>mac</family>
-                </os>
-            </activation>
-            <properties>
-                <tycho.test.platformArgs>-XstartOnFirstThread</tycho.test.platformArgs>
-            </properties>
-        </profile>
-        <profile>
             <id>source-feature</id>
             <activation>
                 <file>

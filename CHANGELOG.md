@@ -9,6 +9,7 @@ The file is formatted as described on http://keepachangelog.com/.
 
 * Code coverage (#3)
 * AppVeyor support (#8)
+* OS X Travis-CI support (#9)
 
 ## [1.2.1] - 2017-01-24
 

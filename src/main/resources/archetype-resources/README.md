@@ -42,7 +42,7 @@ Code coverage reports (html+xml) can be found in the `tests/target/jacoco/report
 
 ${symbol_pound}${symbol_pound} Continuous Integration
 
-Configuration files to run Continuous Integration builds on Linux (Travis-CI) and Windows (AppVeyor) are present.
+Configuration files to run Continuous Integration builds on Linux (Travis-CI), OS X (Travis-CI) and Windows (AppVeyor) are present.
 
 See `./.travis.yml` file how to trigger a Travis-CI build for every push or pull request.
 Also see `./.travis.yml` file how to upload coverage to https://www.codacy.com .
