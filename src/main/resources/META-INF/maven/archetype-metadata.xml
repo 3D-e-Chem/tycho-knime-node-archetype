@@ -21,12 +21,13 @@
       <directory></directory>
       <includes>
         <include>README.md</include>
+        <include>.travis.yml</include>
       </includes>
     </fileSet>
     <fileSet encoding="UTF-8">
       <directory></directory>
       <includes>
-        <include>.travis.yml</include>
+        <include>appveyor.yml</include>
         <include>LICENSE</include>
         <include>CHANGELOG.md</include>
       </includes>

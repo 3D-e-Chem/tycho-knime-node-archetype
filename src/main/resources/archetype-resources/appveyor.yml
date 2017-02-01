@@ -1,0 +1,21 @@
+# How to enable AppVeyor builds:
+# 1. Goto https://ci.appveyor.com/projects
+# 2. Add this repo as a new project
+# 3. Goto the settings of the project and Badges menu item
+# 4. Copy markdown code to ./README.md below the Travis-CI badge
+version: 1.0.{build}
+cache: C:\Users\appveyor\.m2
+build_script:
+- cmd: mvn package -B
+test_script:
+- cmd: mvn verify -B
+artifacts:
+- path: p2\target\*.zip
+  name: Update site
+on_finish:
+- ps: >-
+    $url = "https://ci.appveyor.com/api/testresults/junit/$($env:APPVEYOR_JOB_ID)"
+
+    Get-ChildItem "tests/target/surefire-reports/" -Filter *.xml | Foreach-Object{
+        (New-Object 'System.Net.WebClient').UploadFile($url, $_.FullName)
+    }

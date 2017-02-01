@@ -8,6 +8,7 @@ The file is formatted as described on http://keepachangelog.com/.
 ### Added
 
 * Code coverage (#3)
+* AppVeyor support (#8)
 
 ## [1.2.1] - 2017-01-24
 
