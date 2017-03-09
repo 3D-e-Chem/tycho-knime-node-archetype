@@ -12,5 +12,3 @@ matrix:
  - os: osx
    osx_image: xcode8.2
    script: Xvfb :5009 & export DISPLAY=:5009 && mvn verify -B
-before_install:
-  - if [ "$TRAVIS_OS_NAME" == "osx" ]; then export JAVA_HOME=$(/usr/libexec/java_home); fi
