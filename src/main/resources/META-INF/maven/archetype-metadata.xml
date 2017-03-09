@@ -10,7 +10,7 @@
         <defaultValue>1.8</defaultValue>
       </requiredProperty>
       <requiredProperty key="knime_version">
-        <defaultValue>3.3</defaultValue>
+        <defaultValue>3.2</defaultValue>
       </requiredProperty>
       <requiredProperty key="github_organization"/>
       <requiredProperty key="github_repository"/>
