@@ -38,8 +38,6 @@ mvn verify
 An Eclipse update site will be made in `p2/target/repository` directory.
 The update site can be used to perform a local installation.
 
-Code coverage reports (html+xml) can be found in the `tests/target/jacoco/report/` directory.
-
 ${symbol_pound}${symbol_pound} Continuous Integration
 
 Configuration files to run Continuous Integration builds on Linux (Travis-CI), OS X (Travis-CI) and Windows (AppVeyor) are present.
@@ -74,6 +72,7 @@ ${symbol_pound}${symbol_pound} Tests
 Tests for the node are in `tests/src` directory.
 Tests can be executed with `mvn verify`, they will be run in a separate KNIME environment.
 Test results will be written to `test/target/surefire-reports` directory.
+Code coverage reports (html+xml) can be found in the `tests/target/jacoco/report/` directory.
 
 ${symbol_pound}${symbol_pound}${symbol_pound} Unit tests
 
@@ -83,20 +82,24 @@ ${symbol_pound}${symbol_pound}${symbol_pound} Workflow tests
 
 See https://github.com/3D-e-Chem/knime-testflow${symbol_pound}3-add-test-workflow
 
+${symbol_pound}${symbol_pound} Speed up builds
+
+Running mvn commands can take a long time as Tycho fetches indices of all p2 update sites.
+This can be skipped by running maven offline using `mvn -o`.
+
 ${symbol_pound} New release
 
-1. Update versions in pom files with `mvn org.eclipse.tycho:tycho-versions-plugin:set-version -DnewVersion=<version>` command.
-2. Manually update version of "source" feature in `p2/category.xml` file.
-3. Create package with `mvn package`, will create update site in `p2/target/repository`
-4. Run tests with `mvn verify`
-5. Optionally, test node by installing it in KNIME from a local update site
-6. Append new release to an update site
+1. Update versions in pom files with `mvn org.eclipse.tycho:tycho-versions-plugin:set-version -DnewVersion=<version>-SNAPSHOT` command.
+2. Create package with `mvn package`, will create update site in `p2/target/repository`
+3. Run tests with `mvn verify`
+4. Optionally, test node by installing it in KNIME from a local update site
+5. Append new release to an update site
   1. Make clone of an update site repo
   2. Append release to the update site with `mvn install -Dtarget.update.site=<path to update site>`
-7. Commit and push changes in this repo and update site repo.
-8. Create a Github release
-9. Update Zenodo entry
+6. Commit and push changes in this repo and update site repo.
+7. Create a Github release
+8. Update Zenodo entry
   1. Correct authors
   2. Correct license
-10. Make nodes available to 3D-e-Chem KNIME feature by following steps at https://github.com/3D-e-Chem/knime-node-collection#new-release
+9. Make nodes available to 3D-e-Chem KNIME feature by following steps at https://github.com/3D-e-Chem/knime-node-collection#new-release
 

@@ -35,7 +35,7 @@ mvn archetype:generate -DarchetypeGroupId=nl.esciencecenter \
 2. Enter the groupId
 3. Enter the artifactId
 4. Enter the name of the package under which your code will be created
-5. Enter the version of your project
+5. Enter the version of your project, append `-SNAPSHOT` to your semantic version.
 6. Enter the Github organization name or Github username
 7. Enter the Github repository name
 8. Enter the Knime node name

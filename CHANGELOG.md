@@ -5,6 +5,22 @@ The file is formatted as described on http://keepachangelog.com/.
 
 ## [Unreleased]
 
+## [1.4.0] - 2017-03-09
+
+### Added
+
+* Use source references in MANIFEST (#11)
+* Append timestamp to version (#10)
+* Chapter how to use Maven in offline mode (#7)
+
+### Changed
+
+* Upgrade to Tycho 1.0.0 (#12)
+
+### Removed
+
+* Source feature (#11)
+
 ## [1.3.0] - 2017-02-01
 
 ### Added

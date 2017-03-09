@@ -6,9 +6,6 @@
    <feature url="features/${parentArtifactId}.feature-${version}.jar" id="${parentArtifactId}.feature" version="${version}">
       <category name="${parentArtifactId}"/>
    </feature>
-   <feature url="features/${parentArtifactId}.feature.source_${version}.jar" id="${parentArtifactId}.feature.source" version="${version}">
-      <category name="${parentArtifactId}.sources"/>
-   </feature>
    <category-def name="${parentArtifactId}" label="[Enter Category Label here.]">
       <description>
          [Enter Category Description here.]
