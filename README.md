@@ -35,13 +35,14 @@ mvn archetype:generate -DarchetypeGroupId=nl.esciencecenter \
 2. Enter the groupId
 3. Enter the artifactId
 4. Enter the name of the package under which your code will be created
-5. Enter the version of your project, append `-SNAPSHOT` to your semantic version.
+5. Enter the version of your project, use `x.y.z-SNAPSHOT` format, where x.y.z is [semantic versioning](http://semver.org/).
 6. Enter the Github organization name or Github username
 7. Enter the Github repository name
 8. Enter the Knime node name
 9. Confirm
 10. Change directory to generated code.
-11. Fill in all placeholders (`[Enter ... here.]`) in
+11. Make skeleton git aware, by running `git init`, `git add * .travis.yml .gitignore` and `git commit -m "Initial commit"`.
+12. Fill in all placeholders (`[Enter ... here.]`) in
 
     * plugin/META-INF/MANIFEST.MF
     * plugin/src/**/*.xml

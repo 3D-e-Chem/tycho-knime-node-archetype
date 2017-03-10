@@ -1,11 +1,12 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
+#set( $qversion = $version.replace("-SNAPSHOT", ".qualifier") )
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="${parentArtifactId}.feature"
       label="${parentArtifactId} Feature"
-      version="${version}"
+      version="${qversion}"
       provider-name="[Enter provider name here.]">
 
   <description url="https://github.com/${github_organization}/${github_repository}">

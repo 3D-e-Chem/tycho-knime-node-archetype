@@ -7,6 +7,12 @@ The file is formatted as described on http://keepachangelog.com/.
 
 ## [1.4.1] - 2017-03-09
 
+### Added
+
+* Skeleton includes a .gitignore file
+* 3D-e-Chem splash & node explorer category
+* Support for reproducible version qualifiers, aka timestamp in version based on last git commit (#10)
+
 ### Fixed
 
 * Tests require KNIME 3.2

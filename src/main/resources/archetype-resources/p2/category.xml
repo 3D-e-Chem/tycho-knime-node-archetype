@@ -1,9 +1,10 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
+#set( $qversion = $version.replace("-SNAPSHOT", ".qualifier") )
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/${parentArtifactId}.feature-${version}.jar" id="${parentArtifactId}.feature" version="${version}">
+   <feature url="features/${parentArtifactId}.feature-${qversion}.jar" id="${parentArtifactId}.feature" version="${qversion}">
       <category name="${parentArtifactId}"/>
    </feature>
    <category-def name="${parentArtifactId}" label="[Enter Category Label here.]">

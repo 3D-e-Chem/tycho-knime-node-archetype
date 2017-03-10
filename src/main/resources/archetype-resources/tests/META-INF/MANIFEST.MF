@@ -1,11 +1,12 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
+#set( $qversion = $version.replace("-SNAPSHOT", ".qualifier") )
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Tests
 Bundle-SymbolicName: ${rootArtifactId}.tests
-Bundle-Version: ${version}
+Bundle-Version: ${qversion}
 Bundle-RequiredExecutionEnvironment: JavaSE-$java_version
 Require-Bundle: org.junit;bundle-version="4.12.0",
  org.knime.core;bundle-version="[3.1.0,4.0.0)",

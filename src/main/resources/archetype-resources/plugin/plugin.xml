@@ -1,21 +1,20 @@
+#set( $packagepath = $package.replace(".", "/") )
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.0"?>
 <plugin>
 
-    <!-- This is an example for providing an own category
       <extension
          point="org.knime.workbench.repository.categories">
       <category
             description="Category containing my nodes"
-            icon="icons/default.png"
-            level-id="myNodes"
-            name="My nodes"
-            path="/"/>
+            icon="${packagepath}/default.png"
+            level-id="${node}"
+            name="${node}"
+            path="/community/3d-e-chem"/>
    </extension>
-   -->
 
     <extension point="org.knime.workbench.repository.nodes">
-        <node category-path="/" factory-class="${package}.${node}Factory" id="${package}.${node}Factory"/>
+        <node category-path="/community/3d-e-chem/${node}" factory-class="${package}.${node}Factory" id="${package}.${node}Factory"/>
     </extension>
 
 </plugin>

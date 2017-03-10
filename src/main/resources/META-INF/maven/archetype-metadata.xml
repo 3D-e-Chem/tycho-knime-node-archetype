@@ -27,6 +27,7 @@
     <fileSet encoding="UTF-8">
       <directory></directory>
       <includes>
+        <include>.gitignore</include>
         <include>appveyor.yml</include>
         <include>LICENSE</include>
         <include>CHANGELOG.md</include>
