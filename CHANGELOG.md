@@ -13,9 +13,13 @@ The file is formatted as described on http://keepachangelog.com/.
 * 3D-e-Chem splash & node explorer category
 * Support for reproducible version qualifiers, aka timestamp in version based on last git commit (#10)
 
+### Changed
+
+* Raise default KNIME version to 3.3
+
 ### Fixed
 
-* Tests require KNIME 3.2
+* Tests require KNIME 3.3
 
 ## [1.4.0] - 2017-03-09
 
