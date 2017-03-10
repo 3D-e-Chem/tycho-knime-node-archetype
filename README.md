@@ -68,7 +68,7 @@ To deploy current version to Bintray.
 
 ```
 <server>
-    <id>bintray</id>
+    <id>bintray-nlesc-tycho-knime-node-archetype</id>
     <username>************</username>
     <password>********************************</password>
 </server>
