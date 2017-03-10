@@ -222,7 +222,7 @@ http://www.apache.org/licenses/
    </license>
 
    <url>
-      <update label="Update site" url="https://www.example.com/updates"/>
+      <update label="Update site" url="https://3d-e-chem.github.io/updates"/>
       <discovery label="Discovery site" url="https://github.com/${github_organization}/${github_repository}"/>
    </url>
 
