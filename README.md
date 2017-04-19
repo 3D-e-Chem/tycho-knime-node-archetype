@@ -25,24 +25,38 @@ The [Maven archetype](https://maven.apache.org/guides/introduction/introduction-
 
 ## Generate
 
-1. Execute
+1. Add catalog to [~/.m2/settings.xml](https://maven.apache.org/settings.html)
+```
+  <profiles>
+    <profile>
+      <id>knimearchetype</id>
+      <repositories>
+        <repository>
+          <id>archetype</id>
+          <url>https://dl.bintray.com/nlesc/tycho-knime-node-archetype</url>
+        </repository>
+      </repositories>
+    </profile>
+  </profiles>
+```
+
+2. Execute
 ```
 mvn archetype:generate -DarchetypeGroupId=nl.esciencecenter \
 -DarchetypeArtifactId=tycho-knime-node-archetype \
--DarchetypeVersion=1.4.1 \
--DarchetypeRepository=https://dl.bintray.com/nlesc/tycho-knime-node-archetype
+-DarchetypeVersion=1.4.1 -P knimearchetype
 ```
-2. Enter the groupId
-3. Enter the artifactId
-4. Enter the name of the package under which your code will be created
-5. Enter the version of your project, use `x.y.z-SNAPSHOT` format, where x.y.z is [semantic versioning](http://semver.org/).
-6. Enter the Github organization name or Github username
-7. Enter the Github repository name
-8. Enter the Knime node name
-9. Confirm
-10. Change directory to generated code.
-11. Make skeleton git aware, by running `git init`, `git add * .travis.yml .gitignore` and `git commit -m "Initial commit"`.
-12. Fill in all placeholders (`[Enter ... here.]`) in
+3. Enter the groupId
+4. Enter the artifactId
+5. Enter the name of the package under which your code will be created
+6. Enter the version of your project, use `x.y.z-SNAPSHOT` format, where x.y.z is [semantic versioning](http://semver.org/).
+7. Enter the Github organization name or Github username
+8. Enter the Github repository name
+9. Enter the Knime node name
+10. Confirm
+11. Change directory to generated code.
+12. Make skeleton git aware, by running `git init`, `git add * .travis.yml .gitignore` and `git commit -m "Initial commit"`.
+13. Fill in all placeholders (`[Enter ... here.]`) in
 
     * plugin/META-INF/MANIFEST.MF
     * plugin/src/**/*.xml
