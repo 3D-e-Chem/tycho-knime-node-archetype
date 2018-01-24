@@ -33,12 +33,12 @@ ${symbol_pound} Usage
 
 ${symbol_pound} Build
 
-To build the node and verify the tests run the following command:
+To build the node extension and verify the tests run with the following command:
 ```
 mvn verify
 ```
 
-Make sure all code is commited as the snapshot version is determined by the commit timestamp.
+Make sure all code is commited as the snapshot version is determined by git commit timestamp.
 
 An Eclipse update site will be made in `p2/target/repository` directory.
 The update site can be used to perform a local installation.
@@ -108,4 +108,3 @@ ${symbol_pound} New release
   1. Correct authors
   2. Correct license
 9. Make nodes available to 3D-e-Chem KNIME feature by following steps at https://github.com/3D-e-Chem/knime-node-collection#new-release
-
