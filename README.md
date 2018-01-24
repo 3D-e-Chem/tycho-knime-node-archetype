@@ -3,7 +3,7 @@
 [![Build Status Travis-CI](https://travis-ci.org/3D-e-Chem/tycho-knime-node-archetype.svg?branch=master)](https://travis-ci.org/3D-e-Chem/tycho-knime-node-archetype)
 [![Build status AppVeyor](https://ci.appveyor.com/api/projects/status/70whq4bsdl0oq94m?svg=true)](https://ci.appveyor.com/project/3D-e-Chem/tycho-knime-node-archetype)
 [![Download](https://api.bintray.com/packages/nlesc/tycho-knime-node-archetype/tycho-knime-node-archetype/images/download.svg) ](https://bintray.com/nlesc/tycho-knime-node-archetype/tycho-knime-node-archetype/_latestVersion)
-[![DOI](https://zenodo.org/badge/59283343.svg)](https://zenodo.org/badge/latestdoi/59283343)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.597989.svg)](https://doi.org/10.5281/zenodo.597989)
 
 Generates [KNIME](http://www.knime.org) workflow node skeleton repository with sample code.
 
@@ -91,7 +91,8 @@ Further instructions about generated project can be found in it's README.md file
 2. Update CHANGELOG.md & README.md
 3. Commit & push
 4. Create GitHub release
-5. Deploy to Bintray, see Deploy chapter below
+5. Correct License in the Zenodo entry and publish the entry
+6. Deploy to Bintray, see Deploy chapter below
 
 ### Deploy
 
@@ -100,11 +101,13 @@ To deploy current version to Bintray.
 1. Add bintray API key to [~/.m2/settings.xml](https://maven.apache.org/settings.html)
 
 ```
-<server>
+<servers>
+  <server>
     <id>bintray-nlesc-tycho-knime-node-archetype</id>
     <username>************</username>
     <password>********************************</password>
-</server>
+  </server>
+<servers>
 ```
 
 2. Run `mvn deploy`
