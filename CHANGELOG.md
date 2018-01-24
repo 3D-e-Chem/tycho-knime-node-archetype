@@ -5,6 +5,10 @@ The file is formatted as described on http://keepachangelog.com/.
 
 ## [Unreleased]
 
+### Changed
+
+* Replaced Codacy with SonarCloud (#13)
+
 ## [1.4.1] - 2017-03-09
 
 ### Added

@@ -8,4 +8,8 @@
 	</parent>
 	<artifactId>${artifactId}</artifactId>
 	<packaging>eclipse-plugin</packaging>
+	<properties>
+		<sonar.jacoco.reportPaths>../tests/target/jacoco.exec</sonar.jacoco.reportPaths>
+		<sonar.junit.reportsPath>../tests/target/surefire-reports</sonar.junit.reportsPath>
+	</properties>
 </project>

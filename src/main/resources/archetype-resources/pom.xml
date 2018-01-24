@@ -38,6 +38,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<tycho.scmUrl>scm:git:https://github.com/${github_organization}/${github_repository}.git</tycho.scmUrl>
+		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+		<sonar.organization>${github_organization.toLowerCase()}</sonar.organization>
 	</properties>
 	<repositories>
 		<repository>
