@@ -14,7 +14,7 @@
    </extension>
 
     <extension point="org.knime.workbench.repository.nodes">
-        <node category-path="/community/3d-e-chem/${node}" factory-class="${package}.${node}Factory" id="${package}.${node}Factory"/>
+        <node category-path="/community/3d-e-chem/${node}" factory-class="${package}.${node}Factory"/>
     </extension>
 
 </plugin>
