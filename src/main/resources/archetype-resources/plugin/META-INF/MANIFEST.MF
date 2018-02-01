@@ -4,12 +4,12 @@
 #set( $qversion = $version.replace("-SNAPSHOT", ".qualifier") )
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: [Enter Your Node name here here.]
+Bundle-Name: ${node}
 Bundle-SymbolicName: ${rootArtifactId}.plugin;singleton:=true
 Bundle-Version: ${qversion}
 Bundle-RequiredExecutionEnvironment: JavaSE-$java_version
 Bundle-Activator: ${package}.Activator
-Bundle-Vendor: [Enter Your Company here.]
+Bundle-Vendor: ${vendor}
 Require-Bundle: org.eclipse.core.runtime,
  org.knime.workbench.core;bundle-version="[${knime_version}.0,4.0.0)",
  org.knime.workbench.repository;bundle-version="[${knime_version}.0,4.0.0)",
