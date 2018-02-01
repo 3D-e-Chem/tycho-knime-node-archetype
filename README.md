@@ -75,10 +75,8 @@ The following steps are needed to get a ready to use project.
 10. Make skeleton git aware, by running `git init`.
 11. Fill in all placeholders (`[Enter ... here.]`) in
 
-    * plugin/META-INF/MANIFEST.MF
     * plugin/src/**/*.xml
     * feature/feature.xml
-    * p2/category.xml
 
 12. Commit all changes and push to GitHub
 13. Optionally, setup Continuous Integration as described in the project README.md file.
