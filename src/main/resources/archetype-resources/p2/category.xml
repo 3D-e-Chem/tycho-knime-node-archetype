@@ -4,8 +4,11 @@
 #set( $qversion = $version.replace("-SNAPSHOT", ".qualifier") )
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/${parentArtifactId}.feature-${qversion}.jar" id="${parentArtifactId}.feature" version="${qversion}">
+   <feature id="${parentArtifactId}.feature" version="${qversion}">
       <category name="nl.esciencecenter.3D-e-Chem"/>
+   </feature>
+   <feature id="${parentArtifactId}.feature.source" version="${qversion}">
+      <category name="nl.esciencecenter.3D-e-Chem.sources"/>
    </feature>
    <category-def name="nl.esciencecenter.3D-e-Chem" label="KNIME 3D-e-Chem Contributions">
       <description>

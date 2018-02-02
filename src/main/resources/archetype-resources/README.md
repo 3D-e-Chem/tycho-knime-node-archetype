@@ -109,15 +109,16 @@ This can be skipped by running maven offline using `mvn -o`.
 ${symbol_pound} New release
 
 1. Update versions in pom files with `mvn org.eclipse.tycho:tycho-versions-plugin:set-version -DnewVersion=<version>-SNAPSHOT` command.
-2. Create package with `mvn package`, will create update site in `p2/target/repository`
-3. Run tests with `mvn verify`
-4. Optionally, test node by installing it in KNIME from a local update site
-5. Append new release to an update site
+2. Manually update version of "source" feature in `p2/category.xml` file.
+3. Create package with `mvn package`, will create update site in `p2/target/repository`
+4. Run tests with `mvn verify`
+5. Optionally, test node by installing it in KNIME from a local update site
+6. Append new release to an update site
   1. Make clone of an update site repo
   2. Append release to the update site with `mvn install -Dtarget.update.site=<path to update site>`
-6. Commit and push changes in this repo and update site repo.
-7. Create a Github release
-8. Update Zenodo entry
+7. Commit and push changes in this repo and update site repo.
+8. Create a Github release
+9. Update Zenodo entry
   1. Correct authors
   2. Correct license
-9. Make nodes available to 3D-e-Chem KNIME feature by following steps at https://github.com/3D-e-Chem/knime-node-collection#new-release
+10. Make nodes available to 3D-e-Chem KNIME feature by following steps at https://github.com/3D-e-Chem/knime-node-collection#new-release
