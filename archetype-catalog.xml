@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-catalog xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-catalog/1.0.0 http://maven.apache.org/xsd/archetype-catalog-1.0.0.xsd" 
+  xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-catalog/1.0.0" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <archetypes>
+    <archetype>
+      <groupId>nl.esciencecenter</groupId>
+      <artifactId>tycho-knime-node-archetype</artifactId>
+      <version>1.5.0</version>
+      <description>Archetype for a KNIME node.</description>
+      <repository>https://dl.bintray.com/nlesc/tycho-knime-node-archetype</repository>
+    </archetype>
+  </archetypes>
+</archetype-catalog>

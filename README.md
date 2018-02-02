@@ -83,10 +83,25 @@ The following steps are needed to get a ready to use project.
 
 Further instructions about generated project can be found in it's README.md file.
 
+## Generate from inside KNIME SDK
+
+1. Start up the KNIME SDK
+2. Install the `m2e - Maven Integration for Eclipse` software, (you might need to add the add the Eclipse software site which is `http://download.eclipse.org/releases/neon` for the version 3.5.1 of the KNIME SDK)
+3. Register the archetype catalog which contains this archetype
+3.1. Goto Window > Preferences > Maven > Archetypes
+3.2. Add a remove catalog with `https://github.com/3D-e-Chem/tycho-knime-node-archetype/raw/master/archetype-catalog.xml`
+4. Create a new project based on archetype
+4.1. Goto File > New > Project ... > Maven
+4.2. Select Maven Project & press Next button
+4.3. Use default location & press Next button
+4.4. Select Catalog you added in 3.2
+4.5. Select the archetype with artifact id `tycho-knime-node-archetype` & press Next button
+4.6. Fill in the form & press Finish button
+
 ## New release
 
 1. Adjust version in pom.xml
-2. Update CHANGELOG.md & README.md
+2. Update CHANGELOG.md & README.md & archetype-catalog.xml
 3. Commit & push
 4. Create GitHub release
 5. Correct License in the Zenodo entry and publish the entry
