@@ -27,7 +27,7 @@ The archetype is hosted on a [BinTray repository](https://dl.bintray.com/nlesc/t
 Maven does not resolve to this BinTray repository by default so it must be added.
 
 The [~/.m2/settings.xml](https://maven.apache.org/settings.html) should contain the following profile:
-```
+```xml
 <?xml version="1.0" encoding="UTF-8" ?>
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -50,7 +50,7 @@ The [~/.m2/settings.xml](https://maven.apache.org/settings.html) should contain 
 ## Generate
 
 The following command will generate a skeleton project
-```
+```sh
 mvn archetype:generate -DarchetypeGroupId=nl.esciencecenter \
 -DarchetypeArtifactId=tycho-knime-node-archetype \
 -DarchetypeVersion=1.5.0 -P knimearchetype
