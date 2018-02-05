@@ -98,6 +98,8 @@ Further instructions about generated project can be found in it's README.md file
 4.5. Select the archetype with artifact id `tycho-knime-node-archetype` & press Next button
 4.6. Fill in the form & press Finish button
 
+Further instructions about generated project can be found in it's README.md file.
+
 ## New release
 
 1. Adjust version in pom.xml
