@@ -4,15 +4,23 @@
 #set( $qversion = $version.replace("-SNAPSHOT", ".qualifier") )
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature id="${parentArtifactId}.feature" version="${qversion}">
-      <category name="nl.esciencecenter.3D-e-Chem"/>
-   </feature>
-   <feature id="${parentArtifactId}.feature.source" version="${qversion}">
-      <category name="nl.esciencecenter.3D-e-Chem.sources"/>
-   </feature>
-   <category-def name="nl.esciencecenter.3D-e-Chem" label="KNIME 3D-e-Chem Contributions">
-      <description>
-         3D-e-Chem: Collection KNIME nodes &amp; Extensions for the NLeSC 3d-e-Chem project
-      </description>
-   </category-def>
+	<feature id="${parentArtifactId}.feature" version="${qversion}">
+		<category name="nl.esciencecenter.3D-e-Chem" />
+	</feature>
+	<feature id="${parentArtifactId}.feature.source" version="${qversion}">
+		<category name="nl.esciencecenter.3D-e-Chem.sources" />
+	</feature>
+	<category-def name="nl.esciencecenter.3D-e-Chem" label="KNIME 3D-e-Chem Contributions">
+		<description>
+			3D-e-Chem: Collection KNIME nodes &amp; Extensions for the NLeSC 3d-e-Chem
+			project
+		</description>
+	</category-def>
+	<category-def name="nl.esciencecenter.3D-e-Chem.sources"
+		label="KNIME 3D-e-Chem Contributions Sources">
+		<description>
+			3D-e-Chem Sources: Sources of KNIME nodes &amp; Extensions for the NLeSC
+			3d-e-Chem project
+		</description>
+	</category-def>
 </site>
