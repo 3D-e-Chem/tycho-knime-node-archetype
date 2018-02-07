@@ -5,9 +5,20 @@ The file is formatted as described on http://keepachangelog.com/.
 
 ## [Unreleased]
 
+## [1.6.0] - 2018-02-07
+
 ### Added
 
 * Source feature (#11)
+* Instructions to generate skeleton from inside KNIME SDK
+* vendor as property 
+
+### Changed
+
+* Update source feature version when repo version is updated (#12)
+* Use Jacoco 0.8.0 for coverage
+
+## [1.5.0] - 2017-01-24
 
 ### Changed
 
