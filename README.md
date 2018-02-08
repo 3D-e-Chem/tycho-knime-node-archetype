@@ -53,7 +53,7 @@ The following command will generate a skeleton project
 ```sh
 mvn archetype:generate -DarchetypeGroupId=nl.esciencecenter \
 -DarchetypeArtifactId=tycho-knime-node-archetype \
--DarchetypeVersion=1.5.0 -P knimearchetype
+-DarchetypeVersion=1.6.0 -P knimearchetype
 ```
 
 The command will ask the following questions:
