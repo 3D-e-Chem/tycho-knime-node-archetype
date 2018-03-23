@@ -10,7 +10,7 @@ authors:
   affiliation: Nederlands eScience Center
   orcid: https://orcid.org/0000-0002-5821-2060
 version: 1.6.0
-date-released: '2018-02-07'
+date-released: 2018-02-07
 repository-code: https://github.com/3D-e-Chem/tycho-knime-node-archetype
 license: Apache-2.0
 references:
