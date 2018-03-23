@@ -1,3 +1,9 @@
 target/
+
+# Eclipse
 .project
 .settings
+
+# IDEA
+*.iml
+.idea
