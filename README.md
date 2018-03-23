@@ -53,7 +53,7 @@ The following command will generate a skeleton project
 ```sh
 mvn archetype:generate -DarchetypeGroupId=nl.esciencecenter \
 -DarchetypeArtifactId=tycho-knime-node-archetype \
--DarchetypeVersion=1.6.0 -P knimearchetype
+-DarchetypeVersion=1.7.0 -P knimearchetype
 ```
 
 The command will ask the following questions:
@@ -65,7 +65,9 @@ The command will ask the following questions:
 5. Enter the GitHub organization name or GitHub username
 6. Enter the GitHub repository name
 7. Enter the KNIME node name
-8. Confirm
+8. Enter the vendor name
+9. For branded property enter `Y` to enable the 3D-e-Chem project branding like splash logo, node category and update site category or enter `N` to skip the branding.
+9. Confirm
 
 The skeleton has been generated in a sub-directory named after the artifactId in the current working directory.
 
@@ -108,9 +110,10 @@ Further instructions about generated project can be found in it's README.md file
 1. Adjust version in pom.xml
 2. Update CHANGELOG.md & README.md & archetype-catalog.xml
 3. Commit & push
-4. Create GitHub release
-5. Correct License in the Zenodo entry and publish the entry
-6. Deploy to Bintray, see Deploy chapter below
+4. Test archetype by running `mvn verify`
+5. Create GitHub release
+6. Correct License in the Zenodo entry and publish the entry
+7. Deploy to Bintray, see Deploy chapter below
 
 ### Deploy
 

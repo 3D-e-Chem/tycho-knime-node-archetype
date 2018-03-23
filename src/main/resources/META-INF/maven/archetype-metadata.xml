@@ -15,9 +15,8 @@
       <requiredProperty key="github_organization"/>
       <requiredProperty key="github_repository"/>
       <requiredProperty key="node"/>
-      <requiredProperty key="vendor">
-        <defaultValue>Netherlands eScience Center</defaultValue>
-      </requiredProperty>
+      <requiredProperty key="vendor"/>
+      <requiredProperty key="branded"/>
     </requiredProperties>
   <fileSets>
     <fileSet filtered="true" encoding="UTF-8">

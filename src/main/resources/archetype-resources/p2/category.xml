@@ -4,6 +4,7 @@
 #set( $qversion = $version.replace("-SNAPSHOT", ".qualifier") )
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
+#if( $branded == "Y")
 	<feature id="${parentArtifactId}.feature" version="${qversion}">
 		<category name="nl.esciencecenter.3D-e-Chem" />
 	</feature>
@@ -17,10 +18,23 @@
 		</description>
 	</category-def>
 	<category-def name="nl.esciencecenter.3D-e-Chem.sources"
-		label="KNIME 3D-e-Chem Contributions Sources">
+				  label="KNIME 3D-e-Chem Contributions Sources">
 		<description>
 			3D-e-Chem Sources: Sources of KNIME nodes &amp; Extensions for the NLeSC
 			3d-e-Chem project
 		</description>
 	</category-def>
+#else
+	<feature id="${parentArtifactId}.feature" version="${qversion}">
+		<category name="${vendor}" />
+	</feature>
+	<feature id="${parentArtifactId}.feature.source" version="${qversion}">
+		<category name="${vendor} Sources" />
+	</feature>
+	<category-def name="${vendor}" label="KNIME ${vendor} Contributions">
+	</category-def>
+	<category-def name="${vendor} Sources"
+				  label="KNIME ${vendor} Contributions Sources">
+	</category-def>
+#end
 </site>

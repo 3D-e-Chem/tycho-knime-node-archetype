@@ -13,8 +13,10 @@ Bundle-Vendor: ${vendor}
 Require-Bundle: org.eclipse.core.runtime,
  org.knime.workbench.core;bundle-version="[${knime_version}.0,4.0.0)",
  org.knime.workbench.repository;bundle-version="[${knime_version}.0,4.0.0)",
- org.knime.base;bundle-version="[${knime_version}.0,4.0.0)",
- nl.esciencecenter.e3dchem.plugin
+ org.knime.base;bundle-version="[${knime_version}.0,4.0.0)"
+#if( $branded == "Y")
+ ,nl.esciencecenter.e3dchem.plugin
+#end
 Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: .
 Export-Package: ${package}

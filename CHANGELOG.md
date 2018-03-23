@@ -5,6 +5,12 @@ The file is formatted as described on http://keepachangelog.com/.
 
 ## [Unreleased]
 
+## [1.7.0] - 2018-03-23
+
+### Changed
+
+* 3D-e-Chem branding is optional (#16)
+
 ## [1.6.0] - 2018-02-07
 
 ### Added
