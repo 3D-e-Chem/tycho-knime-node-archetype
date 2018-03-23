@@ -108,12 +108,11 @@ Further instructions about generated project can be found in it's README.md file
 ## New release
 
 1. Adjust version in pom.xml
-2. Update CHANGELOG.md & README.md & archetype-catalog.xml
+2. Update CHANGELOG.md & README.md & archetype-catalog.xml & CITATION.cff
 3. Commit & push
 4. Test archetype by running `mvn verify`
 5. Create GitHub release
-6. Correct License in the Zenodo entry and publish the entry
-7. Deploy to Bintray, see Deploy chapter below
+6. Deploy to Bintray, see Deploy chapter below
 
 ### Deploy
 

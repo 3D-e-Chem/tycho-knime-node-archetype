@@ -3,38 +3,13 @@
 cff-version: 1.0.3
 message: If you use this software, please cite it as below.
 title: KNIME node archetype
-doi: 10.5281/zenodo.1168476
+doi: 10.5281/zenodo.597989
 authors:
 - given-names: Stefan
   family-names: Verhoeven
   affiliation: Nederlands eScience Center
   orcid: https://orcid.org/0000-0002-5821-2060
-version: 1.6.0
-date-released: 2018-02-07
+version: 1.7.0
+date-released: 2018-03-23
 repository-code: https://github.com/3D-e-Chem/tycho-knime-node-archetype
 license: Apache-2.0
-references:
-- type: software
-  doi: 10.5281/zenodo.997272
-  title: knime-plants
-  authors:
-  - given-names: Stefan
-    family-names: Verhoeven
-    affiliation: Nederlands eScience Center
-  - given-names: George
-    family-names: Kanev
-    affiliation: Vrije Universiteit Amsterdam
-  - given-names: Albert
-    family-names: Kooistra
-    name-particle: J.
-    affiliation: Vrije Universiteit Amsterdam
-  - given-names: Marton
-    family-names: Vass
-    affiliation: Vrije Universiteit Amsterdam
-  - given-names: Ross
-    family-names: McGuire
-    affiliation: Radboud UMC
-  - given-names: Chris
-    family-names: de Graaf
-    affiliation: Vrije Universiteit Amsterdam
-  notes: is compiled/created by this citation
