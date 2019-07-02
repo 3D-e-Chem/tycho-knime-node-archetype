@@ -28,29 +28,17 @@
 		<maven>3.0</maven>
 	</prerequisites>
 	<properties>
-		<knime.version>${knime_version}</knime.version>
-		<knime.update.site>http://update.knime.org/analytics-platform/${symbol_dollar}{knime.version}/</knime.update.site>
 		<tycho.version>${tycho_version}</tycho.version>
 		<tycho.extras.version>${tycho_version}</tycho.extras.version>
 		<tycho.test.jvmArgs>-Xmx512m</tycho.test.jvmArgs>
+		<tycho.scmUrl>scm:git:https://github.com/${github_organization}/${github_repository}.git</tycho.scmUrl>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<tycho.scmUrl>scm:git:https://github.com/${github_organization}/${github_repository}.git</tycho.scmUrl>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 		<sonar.organization>${github_organization.toLowerCase()}</sonar.organization>
+		<target.file>KNIME-AP-4.0</target.file>
 	</properties>
-	<repositories>
-		<repository>
-			<id>knime</id>
-			<layout>p2</layout>
-			<url>${symbol_dollar}{knime.update.site}</url>
-		</repository>
-		<repository>
-			<id>3d-e-chem</id>
-			<layout>p2</layout>
-			<url>https://3d-e-chem.github.io/updates</url>
-		</repository>
-	</repositories>
 	<build>
 		<plugins>
 			<plugin>
@@ -94,6 +82,14 @@
 							<arch>x86_64</arch>
 						</environment>
 					</environments>
+					 <target>
+						<artifact>
+							<groupId>${groupId}</groupId>
+							<artifactId>${artifactId}.targetplatform</artifactId>
+							<version>${symbol_dollar}{project.version}</version>
+							<classifier>${symbol_dollar}{target.file}</classifier>
+						</artifact>
+					</target>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -116,8 +112,13 @@
 			</plugin>
 			<plugin>
 				<groupId>org.eclipse.tycho.extras</groupId>
+				<artifactId>tycho-pack200a-plugin</artifactId>
+				<version>${symbol_dollar}{tycho.extras.version}</version>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho.extras</groupId>
 				<artifactId>tycho-source-feature-plugin</artifactId>
-				<version>${tycho.extras.version}</version>
+				<version>${symbol_dollar}{tycho.extras.version}</version>
 				<executions>
 					<execution>
 						<id>source-feature</id>
@@ -131,7 +132,7 @@
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>tycho-p2-plugin</artifactId>
-				<version>${tycho.version}</version>
+				<version>${symbol_dollar}{tycho.version}</version>
 				<executions>
 					<execution>
 						<id>attach-p2-metadata</id>
@@ -141,11 +142,6 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.eclipse.tycho.extras</groupId>
-				<artifactId>tycho-pack200a-plugin</artifactId>
-				<version>${tycho.extras.version}</version>
 			</plugin>
 		</plugins>
 		<pluginManagement>
@@ -163,7 +159,7 @@
 						<dependency>
 							<groupId>org.eclipse.tycho.extras</groupId>
 							<artifactId>tycho-sourceref-jgit</artifactId>
-							<version>${tycho.extras.version}</version>
+							<version>${symbol_dollar}{tycho.extras.version}</version>
 						</dependency>
 					</dependencies>
 					<configuration>

@@ -52,39 +52,20 @@ Also see `./.travis.yml` file how to perform a [SonarCloud](https://sonarcloud.i
 
 See `./appveyor.yml` file how to run on https://www.appveyor.com .
 
+To cite the KNIME node, a [DOI](https://en.wikipedia.org/wiki/Digital_object_identifier) can be generated when a GitHub release is made. To enable, the GitHub repository must be connected on https://zenodo.org/account/settings/github/ . The connection must be made before creating a GitHub release.
+To [cite the software](https://research-software.org/citation/developers/) a human and computer readable file called `CITATION.cff` is included.
+
 ${symbol_pound} Development
 
-Steps to get development environment setup:
+Steps to get development environment setup based on https://github.com/knime/knime-sdk-setup#sdk-setup:
 
-1. Download KNIME SDK from https://www.knime.org/downloads/overview
-2. Install/extract KNIME SDK
-3. Start KNIME SDK
-4. Install m2e (Maven integration for Eclipse) + Test workflows in JUnit
+1. Install Java 8
+2. Install Eclipse for [RCP and RAP developers](https://www.eclipse.org/downloads/packages/release/2018-12/r/eclipse-ide-rcp-and-rap-developers)
+3. Configure Java 8 inside Eclipse Window > Preferences > Java > Installed JREs
+4. Import this repo as an Existing Maven project
+5. Activate target platform by going to Window > Preferences > Plug-in Development > Target Platform and check the `KNIME Analytics Platform (${knime_version}) - ${artifactId}.targetplatform/KNIME-AP-${knime_version}.target` target definition.
 
-    1. Goto Window -> Preferences -> Install/Update -> Available Software Sites
-    2. Make sure the following Software Sites (or a version of them) are present otherwise add them:
-
-      * http://update.knime.org/analytics-platform/${knime_version}
-      * http://download.eclipse.org/eclipse/updates/4.6
-      * http://download.eclipse.org/releases/neon
-      * https://3d-e-chem.github.io/updates (only required for 3D-e-Chem node)
-
-    3. Goto Help -> Check for updates
-    4. Install any updates found & restart
-    5. Goto Help > Install new software ...
-    6. Select --All Available sites-- in work with pulldown
-    7. Wait for list to be filled, `Pending...` should disappear
-    8. Select the following items:
-
-      * m2e - Maven integration for Eclipse (includes Incubating components)
-      * Test KNIME workflows from a Junit test
-      * Splash & node category for 3D-e-Chem KNIME nodes (only required for 3D-e-Chem node)
-
-    9. Install software & restart
-
-5. Import this repo as an Existing Maven project
-
-During import the Tycho Eclipse providers must be installed, Eclipse will ask for your permission.
+During import the Tycho Eclipse providers must be installed.
 
 ${symbol_pound}${symbol_pound} Tests
 
@@ -123,3 +104,4 @@ ${symbol_pound} New release
   1. Correct authors
   2. Correct license
 9. Make nodes available to 3D-e-Chem KNIME feature by following steps at https://github.com/3D-e-Chem/knime-node-collection#new-release
+10. Update `CITATION.cff` file with new DOI, version, release date
