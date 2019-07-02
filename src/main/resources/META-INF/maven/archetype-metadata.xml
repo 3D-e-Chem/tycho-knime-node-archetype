@@ -4,13 +4,13 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <requiredProperties>
       <requiredProperty key="tycho_version">
-        <defaultValue>1.1.0</defaultValue>
+        <defaultValue>1.4.0</defaultValue>
       </requiredProperty>
       <requiredProperty key="java_version">
         <defaultValue>1.8</defaultValue>
       </requiredProperty>
       <requiredProperty key="knime_version">
-        <defaultValue>3.3</defaultValue>
+        <defaultValue>4.0</defaultValue>
       </requiredProperty>
       <requiredProperty key="github_organization"/>
       <requiredProperty key="github_repository"/>
@@ -24,6 +24,8 @@
       <includes>
         <include>README.md</include>
         <include>.travis.yml</include>
+        <include>.zenodo.json</include>
+        <include>CITATION.cff</include>
       </includes>
     </fileSet>
     <fileSet encoding="UTF-8">
@@ -116,6 +118,16 @@
           <directory></directory>
           <includes>
             <include>build.properties</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+    </module>
+    <module id="${rootArtifactId}.targetplatform" dir="targetplatform" name="${rootArtifactId}.targetplatform">
+      <fileSets>
+        <fileSet filtered="true" encoding="UTF-8">
+          <directory></directory>
+          <includes>
+            <include>KNIME-AP-4.0.target</include>
           </includes>
         </fileSet>
       </fileSets>

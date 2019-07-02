@@ -20,7 +20,7 @@ The [Maven archetype](https://maven.apache.org/guides/introduction/introduction-
 
 ## Requirements
 
-* Java >=1.8
+* Java ==8
 * Maven >=3.0
 
 The archetype is hosted on a [BinTray repository](https://dl.bintray.com/nlesc/tycho-knime-node-archetype).
@@ -53,7 +53,7 @@ The following command will generate a skeleton project
 ```sh
 mvn archetype:generate -DarchetypeGroupId=nl.esciencecenter \
 -DarchetypeArtifactId=tycho-knime-node-archetype \
--DarchetypeVersion=1.7.0 -P knimearchetype
+-DarchetypeVersion=2.0.0 -P knimearchetype
 ```
 
 The command will ask the following questions:
@@ -87,19 +87,20 @@ Further instructions about generated project can be found in it's README.md file
 
 ## Generate from inside KNIME SDK
 
-1. Start up the KNIME SDK
-2. Install the `m2e - Maven Integration for Eclipse` software, (you might need to add the add the Eclipse software site which is `http://download.eclipse.org/releases/neon` for the version 3.5.1 of the KNIME SDK)
-3. Register the archetype catalog which contains this archetype
+1. Install Java 8
+2. Install Eclipse for [RCP and RAP developers](https://www.eclipse.org/downloads/packages/release/2018-12/r/eclipse-ide-rcp-and-rap-developers)
+3. Configure Java 8 inside Eclipse Window > Preferences > Java > Installed JREs
+4. Register the archetype catalog which contains this archetype
 
       1. Goto Window > Preferences > Maven > Archetypes
-      2. Add a remove catalog with `https://github.com/3D-e-Chem/tycho-knime-node-archetype/raw/master/archetype-catalog.xml`
+      2. Add a remote catalog with `https://github.com/3D-e-Chem/tycho-knime-node-archetype/raw/master/archetype-catalog.xml`
 
-4. Create a new project based on archetype
+5. Create a new project based on archetype
 
       1. Goto File > New > Project ... > Maven
       2. Select Maven Project & press Next button
       3. Use default location & press Next button
-      4. Select Catalog you added in 3.2
+      4. Select Catalog you added in step 4.2
       5. Select the archetype with artifact id `tycho-knime-node-archetype` & press Next button
       6. Fill in the form & press Finish button
 
