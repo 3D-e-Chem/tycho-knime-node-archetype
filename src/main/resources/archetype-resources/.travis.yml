@@ -4,16 +4,15 @@
 ${symbol_pound} To trigger a Travis-CI build for every GitHub push or Pull Request:
 ${symbol_pound} 1. Goto https://travis-ci.org/profile/${github_organization}
 ${symbol_pound} 2. Flip the switch for the `${github_repository}` repo
-sudo: false
 language: java
 matrix:
  fast_finish: true
  include:
  - os: linux
-   jdk: oraclejdk8
+   jdk: openjdk8
    script: xvfb-run mvn verify -B
  - os: osx
-   osx_image: xcode8.2
+   osx_image: xcode8.3
    before_install: export JAVA_HOME=$(/usr/libexec/java_home)
    script: Xvfb :5009 & export DISPLAY=:5009 && mvn verify -B
 cache:
