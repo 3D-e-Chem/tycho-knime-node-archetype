@@ -64,6 +64,7 @@ Steps to get development environment setup based on https://github.com/knime/kni
 3. Configure Java 8 inside Eclipse Window > Preferences > Java > Installed JREs
 4. Import this repo as an Existing Maven project
 5. Activate target platform by going to Window > Preferences > Plug-in Development > Target Platform and check the `KNIME Analytics Platform (${knime_version}) - ${artifactId}.targetplatform/KNIME-AP-${knime_version}.target` target definition.
+6. A KNIME Analytics Platform instance can be started by right clicking on the `targetplatform/KNIME\ Analytics\ Platform.launch` file and selecting `Run As → KNIME Analytics Platform`. The KNIME instance will contain the target platform together with all extensions defined in the workspace.
 
 During import the Tycho Eclipse providers must be installed.
 
