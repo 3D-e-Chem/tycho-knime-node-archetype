@@ -6,7 +6,7 @@
     <archetype>
       <groupId>nl.esciencecenter</groupId>
       <artifactId>tycho-knime-node-archetype</artifactId>
-      <version>2.0.0</version>
+      <version>2.0.1</version>
       <description>Archetype for a KNIME node.</description>
       <repository>https://dl.bintray.com/nlesc/tycho-knime-node-archetype</repository>
     </archetype>

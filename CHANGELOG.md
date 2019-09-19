@@ -5,6 +5,20 @@ The file is formatted as described on http://keepachangelog.com/.
 
 ## [Unreleased]
 
+## [2.0.1] - 2019-09-19
+
+### Added
+
+* KNIME launch configuration
+
+### Changed
+
+* Bump dependencies to latest versions
+
+### Fixed
+
+* Run tests on mac book with a touch bar
+
 ## [2.0.0] - 2019-07-02
 
 ### Added
