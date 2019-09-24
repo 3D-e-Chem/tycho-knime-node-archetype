@@ -5,6 +5,12 @@ The file is formatted as described on http://keepachangelog.com/.
 
 ## [Unreleased]
 
+## [2.0.2] - 2019-09-24
+
+### Fixed
+
+* Include KNIME launch configuration during generation
+
 ## [2.0.1] - 2019-09-19
 
 ### Added

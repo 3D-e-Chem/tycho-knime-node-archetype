@@ -128,6 +128,7 @@
           <directory></directory>
           <includes>
             <include>KNIME-AP-4.0.target</include>
+            <include>KNIME Analytics Platform.launch</include>
           </includes>
         </fileSet>
       </fileSets>
