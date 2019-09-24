@@ -131,7 +131,7 @@
 				</os>
 			</activation>
 			<properties>
-				<tycho.test.jvmArgs>-XstartOnFirstThread -nosplash</tycho.test.jvmArgs>
+				<tycho.test.jvmArgs>-XstartOnFirstThread</tycho.test.jvmArgs>
 				<custom.UIThread>false</custom.UIThread>
 			</properties>
 			<build>
