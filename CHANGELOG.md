@@ -5,6 +5,12 @@ The file is formatted as described on http://keepachangelog.com/.
 
 ## [Unreleased]
 
+## [2.0.3] - 2019-09-24
+
+### Fixed
+
+* Tests on OSX fail due to -nosplash argument
+
 ## [2.0.2] - 2019-09-24
 
 ### Fixed
