@@ -18,6 +18,18 @@ The [Maven archetype](https://maven.apache.org/guides/introduction/introduction-
 * /feature/ - eclipse feature
 * /p2/ - eclipse update site
 
+The generated project offers:
+
+* Usage from the command-line using maven or from Eclipse
+* Integrates with normal Eclipse plugin development flow
+* Integration with Continuous Integration builds on Linux ([Travis-CI](https://travis-ci.org)), OS X ([Travis-CI](https://travis-ci.org)) and Windows ([AppVeyor](https://www.appveyor.com/))
+* Integration with [SonarCloud](https://sonarcloud.io) quality analysis via Travis-CI
+* Test workflows for end-2-end tests
+* Test coverage
+* Start KNIME from Eclipse to test nodes without having to release them in a update site
+
+Items above are documented in the generated README.md file, the README also includes instructions for setup for a user, setup for a developer, creating a release and citing the software.
+
 ## Requirements
 
 * Java ==8
