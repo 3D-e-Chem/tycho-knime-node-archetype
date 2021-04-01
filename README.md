@@ -2,7 +2,6 @@
 
 [![Build Status Travis-CI](https://travis-ci.org/3D-e-Chem/tycho-knime-node-archetype.svg?branch=master)](https://travis-ci.org/3D-e-Chem/tycho-knime-node-archetype)
 [![Build status AppVeyor](https://ci.appveyor.com/api/projects/status/70whq4bsdl0oq94m?svg=true)](https://ci.appveyor.com/project/3D-e-Chem/tycho-knime-node-archetype)
-[![Download](https://api.bintray.com/packages/nlesc/tycho-knime-node-archetype/tycho-knime-node-archetype/images/download.svg) ](https://bintray.com/nlesc/tycho-knime-node-archetype/tycho-knime-node-archetype/_latestVersion)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.597989.svg)](https://doi.org/10.5281/zenodo.597989)
 
 Generates [KNIME](http://www.knime.org) workflow node skeleton repository with sample code.
@@ -23,8 +22,8 @@ The [Maven archetype](https://maven.apache.org/guides/introduction/introduction-
 * Java ==8
 * Maven >=3.0
 
-The archetype is hosted on a [BinTray repository](https://dl.bintray.com/nlesc/tycho-knime-node-archetype).
-Maven does not resolve to this BinTray repository by default so it must be added.
+The archetype is hosted on a [GitHub packages repository](https://github.com/orgs/3D-e-Chem/packages?repo_name=tycho-knime-node-archetype).
+Maven does not resolve to this GitHub packages repository by default so it must be added.
 
 The [~/.m2/settings.xml](https://maven.apache.org/settings.html) should contain the following profile:
 ```xml
