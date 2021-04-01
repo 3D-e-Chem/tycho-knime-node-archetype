@@ -39,7 +39,7 @@ The [~/.m2/settings.xml](https://maven.apache.org/settings.html) should contain 
       <repositories>
         <repository>
           <id>archetype</id>
-          <url>https://dl.bintray.com/nlesc/tycho-knime-node-archetype</url>
+          <url>https://maven.pkg.github.com/3D-e-Chem</url>
         </repository>
       </repositories>
     </profile>
@@ -117,21 +117,11 @@ Further instructions about generated project can be found in it's README.md file
 
 ### Deploy
 
-To deploy current version to Bintray.
+To deploy current version to GitHub Packages.
 
-1. Add bintray API key to [~/.m2/settings.xml](https://maven.apache.org/settings.html)
-
-```
-<servers>
-  <server>
-    <id>bintray-nlesc-tycho-knime-node-archetype</id>
-    <username>************</username>
-    <password>********************************</password>
-  </server>
-<servers>
-```
-
-2. Run `mvn deploy`
+0. Create personal access token with write:packages scope
+1. Create [~/.m2/settings.xml](https://docs.github.com/en/packages/guides/configuring-apache-maven-for-use-with-github-packages#authenticating-with-a-personal-access-token)
+2. Run `mvn --batch-mode deploy`
 
 ## Attribution
 

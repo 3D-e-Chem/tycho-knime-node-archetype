@@ -77,9 +77,9 @@
 	</build>
 	<distributionManagement>
 		<repository>
-			<id>bintray-nlesc-tycho-knime-node-archetype</id>
-			<name>nlesc-tycho-knime-node-archetype</name>
-			<url>https://api.bintray.com/maven/nlesc/tycho-knime-node-archetype/tycho-knime-node-archetype/;publish=1</url>
+			<id>github</id>
+			<name>GitHub Packages</name>
+			<url>https://maven.pkg.github.com/3D-e-Chem/tycho-knime-node-archetype</url>
 		</repository>
 	</distributionManagement>
 </project>
