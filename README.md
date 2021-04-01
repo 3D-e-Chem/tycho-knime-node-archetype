@@ -2,7 +2,6 @@
 
 [![Build Status Travis-CI](https://travis-ci.org/3D-e-Chem/tycho-knime-node-archetype.svg?branch=master)](https://travis-ci.org/3D-e-Chem/tycho-knime-node-archetype)
 [![Build status AppVeyor](https://ci.appveyor.com/api/projects/status/70whq4bsdl0oq94m?svg=true)](https://ci.appveyor.com/project/3D-e-Chem/tycho-knime-node-archetype)
-[![Download](https://api.bintray.com/packages/nlesc/tycho-knime-node-archetype/tycho-knime-node-archetype/images/download.svg) ](https://bintray.com/nlesc/tycho-knime-node-archetype/tycho-knime-node-archetype/_latestVersion)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.597989.svg)](https://doi.org/10.5281/zenodo.597989)
 
 Generates [KNIME](http://www.knime.org) workflow node skeleton repository with sample code.
@@ -35,8 +34,8 @@ Items above are documented in the generated README.md file, the README also incl
 * Java ==8
 * Maven >=3.0
 
-The archetype is hosted on a [BinTray repository](https://dl.bintray.com/nlesc/tycho-knime-node-archetype).
-Maven does not resolve to this BinTray repository by default so it must be added.
+The archetype is hosted on a [GitHub packages repository](https://github.com/orgs/3D-e-Chem/packages?repo_name=tycho-knime-node-archetype).
+Maven does not resolve to this GitHub packages repository by default so it must be added.
 
 The [~/.m2/settings.xml](https://maven.apache.org/settings.html) should contain the following profile:
 ```xml
@@ -51,7 +50,7 @@ The [~/.m2/settings.xml](https://maven.apache.org/settings.html) should contain 
       <repositories>
         <repository>
           <id>archetype</id>
-          <url>https://dl.bintray.com/nlesc/tycho-knime-node-archetype</url>
+          <url>https://maven.pkg.github.com/3D-e-Chem</url>
         </repository>
       </repositories>
     </profile>
@@ -129,21 +128,11 @@ Further instructions about generated project can be found in it's README.md file
 
 ### Deploy
 
-To deploy current version to Bintray.
+To deploy current version to GitHub Packages.
 
-1. Add bintray API key to [~/.m2/settings.xml](https://maven.apache.org/settings.html)
-
-```
-<servers>
-  <server>
-    <id>bintray-nlesc-tycho-knime-node-archetype</id>
-    <username>************</username>
-    <password>********************************</password>
-  </server>
-<servers>
-```
-
-2. Run `mvn deploy`
+0. Create personal access token with write:packages scope
+1. Create [~/.m2/settings.xml](https://docs.github.com/en/packages/guides/configuring-apache-maven-for-use-with-github-packages#authenticating-with-a-personal-access-token)
+2. Run `mvn --batch-mode deploy`
 
 ## Attribution
 
