@@ -1,7 +1,6 @@
 # Tycho KNIME node archetype
 
-[![Build Status Travis-CI](https://travis-ci.org/3D-e-Chem/tycho-knime-node-archetype.svg?branch=master)](https://travis-ci.org/3D-e-Chem/tycho-knime-node-archetype)
-[![Build status AppVeyor](https://ci.appveyor.com/api/projects/status/70whq4bsdl0oq94m?svg=true)](https://ci.appveyor.com/project/3D-e-Chem/tycho-knime-node-archetype)
+[![Java CI with Maven](https://github.com/3D-e-Chem/knime-klifs/actions/workflows/ci.yml/badge.svg)](https://github.com/3D-e-Chem/knime-gpcrdb/actions/workflows/ci.yml)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.597989.svg)](https://doi.org/10.5281/zenodo.597989)
 
 Generates [KNIME](http://www.knime.org) workflow node skeleton repository with sample code.
@@ -21,8 +20,8 @@ The generated project offers:
 
 * Usage from the command-line using maven or from Eclipse
 * Integrates with normal Eclipse plugin development flow
-* Integration with Continuous Integration builds on Linux ([Travis-CI](https://travis-ci.org)), OS X ([Travis-CI](https://travis-ci.org)) and Windows ([AppVeyor](https://www.appveyor.com/))
-* Integration with [SonarCloud](https://sonarcloud.io) quality analysis via Travis-CI
+* Integration with Continuous Integration builds on [GitHub Actions](https://docs.github.com/en/actions)
+* Integration with [SonarCloud](https://sonarcloud.io) quality analysis via GitHub Actions
 * Test workflows for end-2-end tests
 * Test coverage
 * Start KNIME from Eclipse to test nodes without having to release them in a update site
@@ -31,7 +30,7 @@ Items above are documented in the generated README.md file, the README also incl
 
 ## Requirements
 
-* Java ==8
+* Java ==17
 * Maven >=3.0
 
 The archetype is hosted on a [GitHub packages repository](https://github.com/orgs/3D-e-Chem/packages?repo_name=tycho-knime-node-archetype).
@@ -98,9 +97,9 @@ Further instructions about generated project can be found in it's README.md file
 
 ## Generate from inside KNIME SDK
 
-1. Install Java 8
-2. Install Eclipse for [RCP and RAP developers](https://www.eclipse.org/downloads/packages/release/2018-12/r/eclipse-ide-rcp-and-rap-developers)
-3. Configure Java 8 inside Eclipse Window > Preferences > Java > Installed JREs
+1. Install Java 17
+2. Install Eclipse for [RCP and RAP developers](ttps://www.eclipse.org/downloads/packages/installer)
+3. Configure Java 17 inside Eclipse Window > Preferences > Java > Installed JREs
 4. Register the archetype catalog which contains this archetype
 
       1. Goto Window > Preferences > Maven > Archetypes

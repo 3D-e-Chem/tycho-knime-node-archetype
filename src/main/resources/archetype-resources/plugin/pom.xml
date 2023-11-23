@@ -9,7 +9,7 @@
 	<artifactId>${artifactId}</artifactId>
 	<packaging>eclipse-plugin</packaging>
 	<properties>
-		<sonar.jacoco.reportPaths>../tests/target/jacoco.exec</sonar.jacoco.reportPaths>
+		<sonar.coverage.jacoco.xmlReportPaths>../tests/target/jacoco/report/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
 		<sonar.junit.reportsPath>../tests/target/surefire-reports</sonar.junit.reportsPath>
 	</properties>
 </project>

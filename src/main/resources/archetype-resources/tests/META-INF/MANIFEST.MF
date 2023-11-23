@@ -9,10 +9,10 @@ Bundle-SymbolicName: ${rootArtifactId}.tests
 Bundle-Version: ${qversion}
 Bundle-RequiredExecutionEnvironment: JavaSE-$java_version
 Require-Bundle: org.junit;bundle-version="4.12.0",
- org.knime.product;bundle-version="[${knime_version}.0,5.0.0)",
- org.knime.core;bundle-version="[${knime_version}.0,5.0.0)",
- org.knime.base;bundle-version="[${knime_version}.0,5.0.0)",
- org.knime.testing;bundle-version="[${knime_version}.0,5.0.0)",
+ org.knime.product;bundle-version="[${knime_version}.0,6.0.0)",
+ org.knime.core;bundle-version="[${knime_version}.0,6.0.0)",
+ org.knime.base;bundle-version="[${knime_version}.0,6.0.0)",
+ org.knime.testing;bundle-version="[${knime_version}.0,6.0.0)",
  nl.esciencecenter.e3dchem.knime.testing.plugin;bundle-version="[1.0.3,2.0.0)",
  ${rootArtifactId}.plugin
 Bundle-Vendor: ${vendor}

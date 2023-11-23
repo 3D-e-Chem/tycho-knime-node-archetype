@@ -1,0 +1,79 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+
+${symbol_pound} This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
+${symbol_pound} For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-maven
+
+${symbol_pound} This workflow uses actions that are not certified by GitHub.
+${symbol_pound} They are provided by a third-party and are governed by
+${symbol_pound} separate terms of service, privacy policy, and support
+${symbol_pound} documentation.
+
+${symbol_pound} To perform SonarCloud (https://sonarcloud.io/) analysis, perform next steps
+${symbol_pound} 1. Create organization at https://sonarcloud.io/account/organizations with '${github_organization}' as name and '${github_organization.toLowerCase()}' as key
+${symbol_pound} 2. Analyze new project (+ button in navbar)
+${symbol_pound} 3. In sidebar goto Administration > Analysis Method
+${symbol_pound} 4. Turn off automatic analysis
+${symbol_pound} 5. Select analsysis method `With GIthub Actions`
+${symbol_pound} 6. Follow instructions to add `SONAR_TOKEN` secret to your GitHub repository
+${symbol_pound} 7. Push a change to GitHub to trigger a GitHub action workflow run and SonarCloud analysis
+
+name: Java CI with Maven
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  build-ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+    - name: Set up JDK 17
+      uses: actions/setup-java@v3
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        cache: maven
+    - name: Cache SonarCloud packages
+      uses: actions/cache@v3
+      with:
+        path: ~/.sonar/cache
+        key: ${symbol_dollar}{{ runner.os }}-sonar
+        restore-keys: ${symbol_dollar}{{ runner.os }}-sonar
+    - name: Build and analyze
+      env:
+        GITHUB_TOKEN: ${symbol_dollar}{{ secrets.GITHUB_TOKEN }}  ${symbol_pound}  Needed to get PR information, if any
+        SONAR_TOKEN: ${symbol_dollar}{{ secrets.SONAR_TOKEN }}  ${symbol_pound}  See comments above how to generate a token
+      run: xvfb-run mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=${github_organization}_${github_repository}
+  build-windows:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up JDK 17
+      uses: actions/setup-java@v3
+        with:
+        java-version: '17'
+        distribution: 'temurin'
+        cache: maven
+    - name: Build and analyze
+      run: mvn -B verify
+  build-macos:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up JDK 17
+      uses: actions/setup-java@v3
+        with:
+        java-version: '17'
+        distribution: 'temurin'
+        cache: maven
+    - name: Build and analyze
+        run: |
+        Xvfb :5009 & export DISPLAY=:5009 && mvn -B verify
