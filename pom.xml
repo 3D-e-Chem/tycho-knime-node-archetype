@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>nl.esciencecenter</groupId>
 	<artifactId>tycho-knime-node-archetype</artifactId>
-	<version>2.0.3</version>
+	<version>2.0.4</version>
 	<name>Archetype - Knime node</name>
 	<packaging>maven-archetype</packaging>
 	<licenses>
@@ -25,8 +25,8 @@
 	</issueManagement>
 
 	<ciManagement>
-		<system>Travis CI</system>
-		<url>http://travis-ci.org/3D-e-Chem/tycho-knime-node-archetype</url>
+		<system>GitHub</system>
+		<url>https://github.com/3D-e-Chem/tycho-knime-node-archetype/actions</url>
 	</ciManagement>
 
 	<properties>

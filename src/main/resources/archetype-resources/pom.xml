@@ -21,23 +21,42 @@
 		<url>https://github.com/${github_organization}/${github_repository}/issues</url>
 	</issueManagement>
 	<ciManagement>
-		<system>Travis CI</system>
-		<url>http://travis-ci.org/${github_organization}/${github_repository}</url>
+		<system>GitHub</system>
+		<url>https://github.com/${github_organization}/${github_repository}/actions</url>
 	</ciManagement>
 	<prerequisites>
 		<maven>3.0</maven>
 	</prerequisites>
 	<properties>
 		<tycho.version>${tycho_version}</tycho.version>
-		<tycho.extras.version>${tycho_version}</tycho.extras.version>
+		<tycho.extras.version>${symbol_dollar}{tycho.version}</tycho.extras.version>
 		<tycho.test.jvmArgs>-Xmx512m</tycho.test.jvmArgs>
+		<jacoco.version>0.8.10</jacoco.version>
+		<java.version>${java_version}</java.version>
+		<maven.compiler.version>3.10.1</maven.compiler.version>
 		<tycho.scmUrl>scm:git:https://github.com/${github_organization}/${github_repository}.git</tycho.scmUrl>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<tycho.scmUrl>scm:git:https://github.com/${github_organization}/${github_repository}.git</tycho.scmUrl>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 		<sonar.organization>${github_organization.toLowerCase()}</sonar.organization>
-		<target.file>KNIME-AP-4.0</target.file>
+		<knime.version>${knime_version}</knime.version>
+		<target.file>KNIME-AP-${symbol_dollar}{knime.version}</target.file>
+		<!-- following required if running mvn from JDK17 -->
+		<knime.ini.testArgs>--add-opens=java.security.jgss/sun.security.jgss.krb5=ALL-UNNAMED
+            --add-opens=java.base/sun.security.ssl=ALL-UNNAMED
+            --add-opens=java.base/sun.security.util=ALL-UNNAMED
+            --add-opens=java.base/java.lang=ALL-UNNAMED
+            --add-opens=java.base/java.lang.invoke=ALL-UNNAMED
+            --add-opens=java.base/java.net=ALL-UNNAMED
+            --add-opens=java.base/java.nio=ALL-UNNAMED
+            --add-opens=java.base/java.nio.channels=ALL-UNNAMED
+            --add-opens=java.base/java.util=ALL-UNNAMED
+            --add-opens=java.base/sun.nio.ch=ALL-UNNAMED
+            --add-opens=java.base/sun.nio=ALL-UNNAMED
+            --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED
+            --add-opens=java.base/sun.net.www.protocol.http=ALL-UNNAMED
+            -Dmisc.io.testing=true</knime.ini.testArgs>
 	</properties>
 	<build>
 		<plugins>
@@ -109,11 +128,6 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.eclipse.tycho.extras</groupId>
-				<artifactId>tycho-pack200a-plugin</artifactId>
-				<version>${symbol_dollar}{tycho.extras.version}</version>
 			</plugin>
 			<plugin>
 				<groupId>org.eclipse.tycho.extras</groupId>

@@ -1,8 +1,0 @@
-version: 1.0.{build}
-cache: C:\Users\appveyor\.m2
-init:
-- mvn --version
-build_script:
-- cmd: mvn package -B
-test_script:
-- cmd: mvn verify -B

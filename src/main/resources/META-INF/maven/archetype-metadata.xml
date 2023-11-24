@@ -4,13 +4,13 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <requiredProperties>
       <requiredProperty key="tycho_version">
-        <defaultValue>1.4.0</defaultValue>
+        <defaultValue>2.7.5</defaultValue>
       </requiredProperty>
       <requiredProperty key="java_version">
-        <defaultValue>1.8</defaultValue>
+        <defaultValue>17</defaultValue>
       </requiredProperty>
       <requiredProperty key="knime_version">
-        <defaultValue>4.0</defaultValue>
+        <defaultValue>5.1</defaultValue>
       </requiredProperty>
       <requiredProperty key="github_organization"/>
       <requiredProperty key="github_repository"/>
@@ -23,7 +23,7 @@
       <directory></directory>
       <includes>
         <include>README.md</include>
-        <include>.travis.yml</include>
+        <include>.github/workflows/ci.yml</include>
         <include>.zenodo.json</include>
         <include>CITATION.cff</include>
       </includes>
@@ -32,7 +32,7 @@
       <directory></directory>
       <includes>
         <include>.gitignore</include>
-        <include>appveyor.yml</include>
+        <include>.mvn</include>
         <include>LICENSE</include>
         <include>CHANGELOG.md</include>
       </includes>
@@ -118,6 +118,7 @@
           <directory></directory>
           <includes>
             <include>build.properties</include>
+            <include>pom.xml</include>
           </includes>
         </fileSet>
       </fileSets>
@@ -127,7 +128,7 @@
         <fileSet filtered="true" encoding="UTF-8">
           <directory></directory>
           <includes>
-            <include>KNIME-AP-4.0.target</include>
+            <include>KNIME-AP-5.1.target</include>
             <include>KNIME Analytics Platform.launch</include>
           </includes>
         </fileSet>

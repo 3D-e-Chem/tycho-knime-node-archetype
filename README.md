@@ -1,7 +1,6 @@
 # Tycho KNIME node archetype
 
-[![Build Status Travis-CI](https://travis-ci.org/3D-e-Chem/tycho-knime-node-archetype.svg?branch=master)](https://travis-ci.org/3D-e-Chem/tycho-knime-node-archetype)
-[![Build status AppVeyor](https://ci.appveyor.com/api/projects/status/70whq4bsdl0oq94m?svg=true)](https://ci.appveyor.com/project/3D-e-Chem/tycho-knime-node-archetype)
+[![Java CI with Maven](https://github.com/3D-e-Chem/knime-tycho-knime-node-archetype/actions/workflows/ci.yml/badge.svg)](https://github.com/3D-e-Chem/knime-tycho-knime-node-archetype/actions/workflows/ci.yml)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.597989.svg)](https://doi.org/10.5281/zenodo.597989)
 
 Generates [KNIME](http://www.knime.org) workflow node skeleton repository with sample code.
@@ -21,8 +20,8 @@ The generated project offers:
 
 * Usage from the command-line using maven or from Eclipse
 * Integrates with normal Eclipse plugin development flow
-* Integration with Continuous Integration builds on Linux ([Travis-CI](https://travis-ci.org)), OS X ([Travis-CI](https://travis-ci.org)) and Windows ([AppVeyor](https://www.appveyor.com/))
-* Integration with [SonarCloud](https://sonarcloud.io) quality analysis via Travis-CI
+* Integration with Continuous Integration builds on [GitHub Actions](https://docs.github.com/en/actions)
+* Integration with [SonarCloud](https://sonarcloud.io) quality analysis via GitHub Actions
 * Test workflows for end-2-end tests
 * Test coverage
 * Start KNIME from Eclipse to test nodes without having to release them in a update site
@@ -31,7 +30,7 @@ Items above are documented in the generated README.md file, the README also incl
 
 ## Requirements
 
-* Java ==8
+* Java ==17
 * Maven >=3.0
 
 The archetype is hosted on a [GitHub packages repository](https://github.com/orgs/3D-e-Chem/packages?repo_name=tycho-knime-node-archetype).
@@ -64,7 +63,7 @@ The following command will generate a skeleton project
 ```sh
 mvn archetype:generate -DarchetypeGroupId=nl.esciencecenter \
 -DarchetypeArtifactId=tycho-knime-node-archetype \
--DarchetypeVersion=2.0.3 -P knimearchetype
+-DarchetypeVersion=2.0.4 -P knimearchetype
 ```
 
 The command will ask the following questions:
@@ -98,9 +97,9 @@ Further instructions about generated project can be found in it's README.md file
 
 ## Generate from inside KNIME SDK
 
-1. Install Java 8
-2. Install Eclipse for [RCP and RAP developers](https://www.eclipse.org/downloads/packages/release/2018-12/r/eclipse-ide-rcp-and-rap-developers)
-3. Configure Java 8 inside Eclipse Window > Preferences > Java > Installed JREs
+1. Install Java 17
+2. Install Eclipse for [RCP and RAP developers](ttps://www.eclipse.org/downloads/packages/installer)
+3. Configure Java 17 inside Eclipse Window > Preferences > Java > Installed JREs
 4. Register the archetype catalog which contains this archetype
 
       1. Goto Window > Preferences > Maven > Archetypes
@@ -119,12 +118,11 @@ Further instructions about generated project can be found in it's README.md file
 
 ## New release
 
-1. Adjust version in pom.xml
-2. Update CHANGELOG.md & README.md & archetype-catalog.xml & CITATION.cff
-3. Commit & push
-4. Test archetype by running `mvn verify`
-5. Create GitHub release
-6. Deploy to Bintray, see Deploy chapter below
+1. Adjust version in pom.xml & CHANGELOG.md & README.md & archetype-catalog.xml
+2. Commit & push
+3. Test archetype by running `mvn verify`
+4. Create GitHub release
+5. Deploy to GitHub packages, see Deploy chapter below
 
 ### Deploy
 
@@ -137,3 +135,4 @@ To deploy current version to GitHub Packages.
 ## Attribution
 
 The https://github.com/open-archetypes/tycho-eclipse-plugin-archetype was used as inspiration for this archetype.
+Also https://github.com/knime-community/community-repository-template/ and https://github.com/vernalis/vernalis-knime-nodes/ where used as inspiration to upgrade to KNIME 5.1.
