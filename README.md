@@ -1,6 +1,6 @@
 # Tycho KNIME node archetype
 
-[![Java CI with Maven](https://github.com/3D-e-Chem/knime-tycho-knime-node-archetype/actions/workflows/ci.yml/badge.svg)](https://github.com/3D-e-Chem/knime-tycho-knime-node-archetype/actions/workflows/ci.yml)
+[![Java CI with Maven](https://github.com/3D-e-Chem/tycho-knime-node-archetype/actions/workflows/ci.yml/badge.svg)](https://github.com/3D-e-Chem/tycho-knime-node-archetype/actions/workflows/ci.yml)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.597989.svg)](https://doi.org/10.5281/zenodo.597989)
 
 Generates [KNIME](http://www.knime.org) workflow node skeleton repository with sample code.
