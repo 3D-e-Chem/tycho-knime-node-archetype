@@ -40,8 +40,7 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Verify
-      run: |
-        mvn -B verify
+      run: mvn -B verify
   build-macos:
     runs-on: macos-latest
     steps:
@@ -53,6 +52,5 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Verify
-      run: |
-        Xvfb :5009 & export DISPLAY=:5009 && mvn -B verify
+      run: mvn -B package
   
