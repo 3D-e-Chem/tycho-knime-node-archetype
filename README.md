@@ -1,6 +1,6 @@
 # Tycho KNIME node archetype
 
-[![Java CI with Maven](https://github.com/3D-e-Chem/knime-klifs/actions/workflows/ci.yml/badge.svg)](https://github.com/3D-e-Chem/knime-gpcrdb/actions/workflows/ci.yml)
+[![Java CI with Maven](https://github.com/3D-e-Chem/knime-tycho-knime-node-archetype/actions/workflows/ci.yml/badge.svg)](https://github.com/3D-e-Chem/knime-tycho-knime-node-archetype/actions/workflows/ci.yml)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.597989.svg)](https://doi.org/10.5281/zenodo.597989)
 
 Generates [KNIME](http://www.knime.org) workflow node skeleton repository with sample code.
@@ -63,7 +63,7 @@ The following command will generate a skeleton project
 ```sh
 mvn archetype:generate -DarchetypeGroupId=nl.esciencecenter \
 -DarchetypeArtifactId=tycho-knime-node-archetype \
--DarchetypeVersion=2.0.3 -P knimearchetype
+-DarchetypeVersion=2.0.4 -P knimearchetype
 ```
 
 The command will ask the following questions:
@@ -118,12 +118,11 @@ Further instructions about generated project can be found in it's README.md file
 
 ## New release
 
-1. Adjust version in pom.xml
-2. Update CHANGELOG.md & README.md & archetype-catalog.xml & CITATION.cff
-3. Commit & push
-4. Test archetype by running `mvn verify`
-5. Create GitHub release
-6. Deploy to Bintray, see Deploy chapter below
+1. Adjust version in pom.xml & CHANGELOG.md & README.md & archetype-catalog.xml
+2. Commit & push
+3. Test archetype by running `mvn verify`
+4. Create GitHub release
+5. Deploy to GitHub packages, see Deploy chapter below
 
 ### Deploy
 
@@ -136,3 +135,4 @@ To deploy current version to GitHub Packages.
 ## Attribution
 
 The https://github.com/open-archetypes/tycho-eclipse-plugin-archetype was used as inspiration for this archetype.
+Also https://github.com/knime-community/community-repository-template/ and https://github.com/vernalis/vernalis-knime-nodes/ where used as inspiration to upgrade to KNIME 5.1.

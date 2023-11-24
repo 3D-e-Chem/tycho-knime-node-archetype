@@ -29,15 +29,18 @@
 	</prerequisites>
 	<properties>
 		<tycho.version>${tycho_version}</tycho.version>
-		<tycho.extras.version>${symbol_dollar}{tycho_version}</tycho.extras.version>
+		<tycho.extras.version>${symbol_dollar}{tycho.version}</tycho.extras.version>
 		<tycho.test.jvmArgs>-Xmx512m</tycho.test.jvmArgs>
+		<jacoco.version>0.8.10</jacoco.version>
+		<java.version>${java_version}</java.version>
+		<maven.compiler.version>3.10.1</maven.compiler.version>
 		<tycho.scmUrl>scm:git:https://github.com/${github_organization}/${github_repository}.git</tycho.scmUrl>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<tycho.scmUrl>scm:git:https://github.com/${github_organization}/${github_repository}.git</tycho.scmUrl>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 		<sonar.organization>${github_organization.toLowerCase()}</sonar.organization>
-		<knime.version>${tycho_version}</knime.version>
+		<knime.version>${knime_version}</knime.version>
 		<target.file>KNIME-AP-${symbol_dollar}{knime.version}</target.file>
 		<!-- following required if running mvn from JDK17 -->
 		<knime.ini.testArgs>--add-opens=java.security.jgss/sun.security.jgss.krb5=ALL-UNNAMED
